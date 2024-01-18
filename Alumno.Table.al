@@ -2,6 +2,7 @@ table 50100 "Alumno"
 {
     DataClassification = ToBeClassified;
     Caption = 'Alumno';
+    DrillDownPageId = "Lista Matricula";
 
     fields
     {
@@ -14,24 +15,36 @@ table 50100 "Alumno"
         {
             OptionMembers = Masculino,Femenino,Otro,"S/N";
         }
-        field(4; Telefono; Integer) { Caption = 'Teléfono'; }
-        field(5; "Fecha Nacimiento"; Date) { }
+        field(4; Telefono; BigInteger) { Caption = 'Teléfono'; }
+        field(5; "Fecha Nacimiento"; Date) { Caption = 'Fecha Nacimiento'; }
         field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
-        field(7; "Cod. Pais"; Text[100])
+        field(7; "Cod. Pais"; Code[10])
         {
             Caption = 'Cód. país/región';
+            TableRelation = "Country/Region";
         }
         field(8; "Poblacion"; Text[100])
         {
             Caption = 'Población';
+            TableRelation = IF ("Cod. Pais" = CONST('')) "Post Code".City
+            // "Cod. Pais" no es vacío
+            ELSE
+            IF ("Cod. Pais" = FILTER(<> '')) "Post Code".City
+                WHERE("Country/Region Code" = FIELD("Cod. Pais"));
+            ValidateTableRelation = false;
         }
         field(9; "Region"; Text[100])
         {
-            Caption = 'Región';
+            Caption = 'Región/Comunidad Autónoma';
         }
         field(10; "Codigo postal"; Code[10])
         {
             Caption = 'Código postal';
+            TableRelation = IF ("Cod. Pais" = CONST('')) "Post Code"
+            ELSE
+            IF ("Cod. Pais" = FILTER(<> '')) "Post Code"
+                WHERE("Country/Region Code" = FIELD("Cod. Pais"));
+            ValidateTableRelation = false;
         }
     }
     keys
