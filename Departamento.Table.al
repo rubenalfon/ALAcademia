@@ -1,4 +1,4 @@
-table 50104 Departamento
+table 50105 Departamento
 {
     Caption = 'Departamento';
     DataClassification = ToBeClassified;

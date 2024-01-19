@@ -2,6 +2,7 @@ table 50101 "Matricula"
 {
     Caption = 'Matr�cula';
     DataClassification = ToBeClassified;
+    DrillDownPageID = "lista Matricula";
 
     fields
     {
@@ -9,6 +10,7 @@ table 50101 "Matricula"
         {
             DataClassification = ToBeClassified;
             Caption = 'Id Matr�cula';
+            NotBlank = true;
         }
         field(2; "Fecha Matricula"; Date)
         {

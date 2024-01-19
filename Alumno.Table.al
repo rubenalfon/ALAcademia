@@ -2,20 +2,25 @@ table 50100 "Alumno"
 {
     DataClassification = ToBeClassified;
     Caption = 'Alumno';
-    DrillDownPageId = "Lista Matricula";
+    DrillDownPageId = "Carta Alumno";
+    //LookupPageId = "Lista Matricula";
 
     fields
     {
         field(1; "Id Alumno"; Code[10])
         {
             DataClassification = ToBeClassified;
+            NotBlank = true;
         }
         field(2; Nombre; Text[100]) { }
         field(3; Sexo; Option)
         {
             OptionMembers = Masculino,Femenino,Otro,"S/N";
         }
-        field(4; Telefono; BigInteger) { Caption = 'Teléfono'; }
+        field(4; Telefono; BigInteger)
+        {
+            Caption = 'Teléfono';
+        }
         field(5; "Fecha Nacimiento"; Date) { Caption = 'Fecha Nacimiento'; }
         field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
         field(7; "Cod. Pais"; Code[10])
