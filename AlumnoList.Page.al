@@ -1,6 +1,6 @@
 page 50100 "Lista Alumno"
 {
-    Caption = 'Lista Alumno';
+    Caption = 'Alumnos';
     PageType = List;
     Editable = false; // Para obligar a meter datos en card
     ApplicationArea = All;
