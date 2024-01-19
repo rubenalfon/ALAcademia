@@ -20,7 +20,7 @@ table 50104 Curso
         field(5; "Tarifa Laboratorio"; Decimal) { }
         field(6; "Profesor"; Code[10])
         {
-            //TableRelation = Profesor
+            TableRelation = Profesor;
         }
     }
 
