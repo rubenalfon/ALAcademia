@@ -1,4 +1,4 @@
-page 50100 "Lista Alumno"
+page 50100 "Alumnos"
 {
     Caption = 'Lista Alumno';
     PageType = List;
@@ -6,7 +6,7 @@ page 50100 "Lista Alumno"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Alumno;
-    CardPageId = "Carta Alumno"; // De lista a card
+    CardPageId = Alumno; // De lista a card
 
     layout
     {

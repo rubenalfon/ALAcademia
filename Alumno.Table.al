@@ -1,9 +1,8 @@
-table 50100 "Alumno"
+table 50100 Alumno
 {
     DataClassification = ToBeClassified;
     Caption = 'Alumno';
-    DrillDownPageId = "Carta Alumno";
-    //LookupPageId = "Lista Matricula";
+    LookupPageId = Alumnos;
 
     fields
     {
@@ -12,16 +11,22 @@ table 50100 "Alumno"
             DataClassification = ToBeClassified;
             NotBlank = true;
         }
-        field(2; Nombre; Text[100]) { }
+        field(2; Nombre; Text[100]) { NotBlank = true; }
         field(3; Sexo; Option)
         {
             OptionMembers = Masculino,Femenino,Otro,"S/N";
+            NotBlank = true;
         }
         field(4; Telefono; BigInteger)
         {
             Caption = 'Teléfono';
+            NotBlank = true;
         }
-        field(5; "Fecha Nacimiento"; Date) { Caption = 'Fecha Nacimiento'; }
+        field(5; "Fecha Nacimiento"; Date)
+        {
+            Caption = 'Fecha Nacimiento';
+            NotBlank = true;
+        }
         field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
         field(7; "Cod. Pais"; Code[10])
         {

@@ -9,7 +9,7 @@ table 50103 Horario
             DataClassification = ToBeClassified;
             NotBlank = true;
         }
-        field(2; "Nombre"; Text[100]) { }
+        field(2; "Nombre"; Text[100]) { NotBlank = true; }
     }
 
     keys
