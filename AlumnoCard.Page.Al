@@ -2,11 +2,9 @@ page 50101 "Carta Alumno"
 {
     Caption = 'Carta Alumno';
     PageType = Card;
-    /* Ocultar la pagina:
-        ApplicationArea = All;
-        UsageCategory = Administration;
-    */
     SourceTable = Alumno;
+    RefreshOnActivate = true;
+
 
     layout
     {
@@ -23,7 +21,7 @@ page 50101 "Carta Alumno"
             }
             group(GroupDireccion)
             {
-                Caption = 'Dirección';
+                Caption = 'Direcciï¿½n';
                 field(Direccion; Rec.Direccion) { ApplicationArea = All; }
                 field("Cod. Pais"; Rec."Cod. Pais") { ApplicationArea = All; }
                 field(Poblacion; Rec.Poblacion) { ApplicationArea = All; }

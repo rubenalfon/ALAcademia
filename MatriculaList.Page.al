@@ -1,6 +1,6 @@
 page 50102 "Lista Matricula"
 {
-    Caption = 'Lista Matrícula';
+    Caption = 'Lista Matrï¿½cula';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
