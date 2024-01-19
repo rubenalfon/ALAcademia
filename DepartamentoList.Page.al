@@ -1,5 +1,6 @@
 page 50107 Departamentos
 {
+    Caption = 'Departamentos';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
