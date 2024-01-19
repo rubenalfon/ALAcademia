@@ -6,14 +6,10 @@ table 50102 "Profesor"
 
     fields
     {
-        field(1; "Id Profesor"; Code[10])
-        {
-            DataClassification = ToBeClassified;
-            NotBlank = true;
-        }
-        field(2; Nombre; Text[100]) { }
-        field(3; Salario; Decimal) { }
-        field(4; "Fecha Contratacion"; Date) { }
+        field(1; "Id Profesor"; Code[10]) { NotBlank = true; }
+        field(2; Nombre; Text[100]) { NotBlank = true; }
+        field(3; Salario; Decimal) { NotBlank = true; }
+        field(4; "Fecha Contratacion"; Date) { NotBlank = true; }
         field(5; Telefono; BigInteger) { Caption = 'Teléfono'; }
         field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
         field(7; "Cod. Pais"; Code[10])
@@ -43,6 +39,11 @@ table 50102 "Profesor"
             IF ("Cod. Pais" = FILTER(<> '')) "Post Code"
                 WHERE("Country/Region Code" = FIELD("Cod. Pais"));
             ValidateTableRelation = false;
+        }
+        field(11; "Ayudante Profesor"; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "No Docente";
         }
     }
 
