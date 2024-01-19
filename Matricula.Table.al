@@ -1,6 +1,6 @@
 table 50101 "Matricula"
 {
-    Caption = 'Matrícula';
+    Caption = 'Matrï¿½cula';
     DataClassification = ToBeClassified;
 
     fields
@@ -8,15 +8,15 @@ table 50101 "Matricula"
         field(1; "Id Matricula"; Code[10])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Id Matrícula';
+            Caption = 'Id Matrï¿½cula';
         }
         field(2; "Fecha Matricula"; Date)
         {
-            Caption = 'Fecha Matrícula';
+            Caption = 'Fecha Matrï¿½cula';
         }
         field(3; "Hora Matricula"; Time)
         {
-            Caption = 'Hora Matrícula';
+            Caption = 'Hora Matrï¿½cula';
         }
         field(4; "Alumno Referencia"; Code[10])
         {
