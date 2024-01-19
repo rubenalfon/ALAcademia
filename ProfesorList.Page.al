@@ -5,6 +5,7 @@ page 50103 Profesores
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Profesor;
+    CardPageID = "Carta Profesor";
 
     layout
     {

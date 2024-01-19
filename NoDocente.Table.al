@@ -2,13 +2,18 @@ table 50103 "No Docente"
 {
     Caption = 'No Docente';
     DataClassification = ToBeClassified;
+    DrillDownPageId = "No Docentes";
 
     fields
     {
-        field(1; "Id No Docente"; Code[10]) { DataClassification = ToBeClassified; }
+        field(1; "Id No Docente"; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            NotBlank = true;
+        }
         field(2; Nombre; Text[100]) { }
-        field(3; Salario; Decimal) { }
-        field(4; "Puesto"; Text[100]) { }
+        field(3; "Puesto"; Text[100]) { }
+        field(4; Salario; Decimal) { }
         field(5; Telefono; BigInteger) { Caption = 'Teléfono'; }
         field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
         field(7; "Cod. Pais"; Code[10])

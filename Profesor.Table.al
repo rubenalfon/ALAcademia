@@ -2,10 +2,15 @@ table 50102 "Profesor"
 {
     Caption = 'Profesor';
     DataClassification = ToBeClassified;
+    DrillDownPageId = Profesores;
 
     fields
     {
-        field(1; "Id Profesor"; Code[10]) { DataClassification = ToBeClassified; }
+        field(1; "Id Profesor"; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            NotBlank = true;
+        }
         field(2; Nombre; Text[100]) { }
         field(3; Salario; Decimal) { }
         field(4; "Fecha Contratacion"; Date) { }
