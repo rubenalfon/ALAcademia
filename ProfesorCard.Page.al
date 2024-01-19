@@ -1,4 +1,4 @@
-page 50105 "Carta Profesor"
+page 50110 "Carta Profesor"
 {
     Caption = 'Carta Profesor';
     PageType = Card;

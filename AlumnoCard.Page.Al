@@ -1,4 +1,4 @@
-page 50101 "Carta Alumno"
+page 50101 Alumno
 {
     Caption = 'Carta Alumno';
     PageType = Card;
@@ -21,7 +21,7 @@ page 50101 "Carta Alumno"
             }
             group(GroupDireccion)
             {
-                Caption = 'Direcciï¿½n';
+                Caption = 'Dirección';
                 field(Direccion; Rec.Direccion) { ApplicationArea = All; }
                 field("Cod. Pais"; Rec."Cod. Pais") { ApplicationArea = All; }
                 field(Poblacion; Rec.Poblacion) { ApplicationArea = All; }
@@ -30,23 +30,4 @@ page 50101 "Carta Alumno"
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
 }

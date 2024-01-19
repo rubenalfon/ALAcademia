@@ -1,24 +1,26 @@
 table 50101 "Matricula"
 {
-    Caption = 'Matrï¿½cula';
+    Caption = 'Matrícula';
     DataClassification = ToBeClassified;
-    DrillDownPageID = "lista Matricula";
+    //DrillDownPageID = "lista Matricula";
 
     fields
     {
         field(1; "Id Matricula"; Code[10])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Id Matrï¿½cula';
+            Caption = 'Id Matrícula';
             NotBlank = true;
         }
         field(2; "Fecha Matricula"; Date)
         {
-            Caption = 'Fecha Matrï¿½cula';
+            Caption = 'Fecha Matrícula';
+            NotBlank = true;
         }
         field(3; "Hora Matricula"; Time)
         {
-            Caption = 'Hora Matrï¿½cula';
+            Caption = 'Hora Matrícula';
+            NotBlank = true;
         }
         field(4; "Alumno Referencia"; Code[10])
         {
@@ -28,7 +30,7 @@ table 50101 "Matricula"
         field(5; "Curso Referencia"; Code[10])
         {
             Caption = 'Curso Referencia';
-            //TableRelation = Curso; TODO
+            TableRelation = Curso;
         }
 
     }

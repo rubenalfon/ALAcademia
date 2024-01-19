@@ -1,4 +1,4 @@
-page 50103 "Linea Horario"
+page 50103 "Lineas Horario"
 {
     PageType = List;
     ApplicationArea = All;
@@ -16,28 +16,16 @@ page 50103 "Linea Horario"
                 field("Dia"; Rec."Dia") { ApplicationArea = All; }
                 field("Hora Inicio"; Rec."Hora Inicio") { ApplicationArea = All; }
                 field("Hora Fin"; Rec."Hora Fin") { ApplicationArea = All; }
-                field("Id Horario"; Rec."Id Horario") { ApplicationArea = All; }
+                field("Id Horario"; Rec."Id Horario")
+                {
+                    ApplicationArea = All;
+                    DrillDownPageId = Horarios;
+                }
             }
         }
         area(Factboxes)
         {
 
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
-            }
         }
     }
 }
