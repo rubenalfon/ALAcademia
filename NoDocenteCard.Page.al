@@ -17,7 +17,10 @@ page 50106 "Carta No Docente"
                 field(Telefono; Rec.Telefono) { ApplicationArea = All; }
                 field(Puesto; Rec.Puesto) { ApplicationArea = All; }
                 field(Salario; Rec.Salario) { ApplicationArea = All; }
-
+                field("Id Profesor"; Rec."Id Profesor")
+                {
+                    ApplicationArea = All;
+                }
             }
             group(GroupDireccion)
             {

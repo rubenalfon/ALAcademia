@@ -6,12 +6,34 @@ table 50107 "Profesor"
 
     fields
     {
-        field(1; "Id Profesor"; Code[10]) { NotBlank = true; }
-        field(2; Nombre; Text[100]) { NotBlank = true; }
-        field(3; Salario; Decimal) { NotBlank = true; }
-        field(4; "Fecha Contratacion"; Date) { NotBlank = true; }
-        field(5; Telefono; BigInteger) { Caption = 'Teléfono'; }
-        field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
+        field(1; "Id Profesor"; Code[10])
+        {
+            Caption = 'Id Profesor';
+            NotBlank = true;
+        }
+        field(2; Nombre; Text[100])
+        {
+            Caption = 'Nombre';
+            NotBlank = true;
+        }
+        field(3; Salario; Decimal)
+        {
+            Caption = 'Salario';
+            NotBlank = true;
+        }
+        field(4; "Fecha Contratacion"; Date)
+        {
+            Caption = 'Fecha Contratación';
+            NotBlank = true;
+        }
+        field(5; Telefono; BigInteger)
+        {
+            Caption = 'Teléfono';
+        }
+        field(6; Direccion; Text[100])
+        {
+            Caption = 'Dirección';
+        }
         field(7; "Cod. Pais"; Code[10])
         {
             Caption = 'Cód. país/región';
@@ -40,10 +62,16 @@ table 50107 "Profesor"
                 WHERE("Country/Region Code" = FIELD("Cod. Pais"));
             ValidateTableRelation = false;
         }
-        field(11; "Ayudante Profesor"; Code[10])
+        field(11; "Num. Ayudantes"; Integer)
         {
-            DataClassification = ToBeClassified;
-            TableRelation = "No Docente";
+            Caption = 'Num. Ayudantes';
+            FieldClass = FlowField;
+            CalcFormula = COUNT("No Docente" WHERE("Id Profesor" = FILTER(<> ''), "Id Profesor" = FIELD("Id Profesor")));
+        }
+        field(12; "Num. Cursos"; Integer)
+        {
+            Caption = 'Num. Cursos';
+            FieldClass = FlowField;
         }
     }
 
@@ -53,6 +81,11 @@ table 50107 "Profesor"
         {
             Clustered = true;
         }
+    }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Profesor", Nombre, Poblacion, "Codigo postal") { Caption = 'Profesor'; }
     }
 
 }

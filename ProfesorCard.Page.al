@@ -17,7 +17,14 @@ page 50105 "Carta Profesor"
                 field(Telefono; Rec.Telefono) { ApplicationArea = All; }
                 field(Salario; Rec.Salario) { ApplicationArea = All; }
                 field("Fecha Contratacion"; Rec."Fecha Contratacion") { ApplicationArea = All; }
-
+                field("Num. Ayudantes"; Rec."Num. Ayudantes")
+                {
+                    ApplicationArea = All;
+                }
+                field("Num. Cursos"; Rec."Num. Cursos")
+                {
+                    ApplicationArea = All;
+                }
             }
             group(GroupDireccion)
             {

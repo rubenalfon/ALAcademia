@@ -14,11 +14,27 @@ page 50108 "No Docentes"
             repeater(GroupName)
             {
                 ShowCaption = false;
-                field("Id No Docente"; Rec."Id No Docente") { ApplicationArea = All; }
-                field(Nombre; Rec.Nombre) { ApplicationArea = All; }
-                field(Telefono; Rec.Telefono) { ApplicationArea = All; }
-                field(Puesto; Rec.Puesto) { ApplicationArea = All; }
-                field(Salario; Rec.Salario) { ApplicationArea = All; }
+                field("Id No Docente"; Rec."Id No Docente")
+                {
+                    ApplicationArea = All;
+                }
+                field(Nombre; Rec.Nombre)
+                {
+                    ApplicationArea = All;
+                }
+                field(Telefono; Rec.Telefono)
+                {
+                    ApplicationArea = All;
+                }
+                field(Puesto; Rec.Puesto)
+                {
+                    ApplicationArea = All;
+                }
+                field(Salario; Rec.Salario)
+                {
+                    ApplicationArea = All;
+                }
+
             }
         }
     }
