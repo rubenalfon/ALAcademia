@@ -9,6 +9,7 @@ table 50106 "No Docente"
         field(1; "Id No Docente"; Code[10])
         {
             Caption = 'Id No Docente';
+            DataClassification = ToBeClassified;
             NotBlank = true;
         }
         field(2; Nombre; Text[100])
@@ -59,19 +60,9 @@ table 50106 "No Docente"
         field(11; "Id Profesor"; Code[10])
         {
             Caption = 'Id Profesor';
+            DataClassification = ToBeClassified;
             TableRelation = Profesor;
         }
-        // field(11; "Ayudante Filter"; Code[20])
-        // {
-        //     FieldClass = FlowFilter;
-        // }
-        // field(12; "Ayudante"; Boolean)
-        // {
-        //     Caption = 'Ayudante Profesor';
-        //     FieldClass = FlowField;
-        //     CalcFormula = EXIST("No Docente" WHERE(Puesto = FIELD("Puestos No Docente"::Ayudante),
-        //                                             "Id No Docente" = FIELD("Id No Docente")));
-        // }
     }
 
     keys

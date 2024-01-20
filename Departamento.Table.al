@@ -8,14 +8,22 @@ table 50105 Departamento
     {
         field(1; "Id Departamento"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            Caption = 'Id Departamento';
             NotBlank = true;
         }
-        field(2; Nombre; Text[100]) { NotBlank = true; }
-        field(3; Despacho; Text[100]) { NotBlank = true; }
-        field(4; Salario; Decimal) { NotBlank = true; }
+        field(2; Nombre; Text[100])
+        {
+            Caption = 'Nombre';
+            NotBlank = true;
+        }
+        field(3; Despacho; Text[100])
+        {
+            Caption = 'Despacho';
+            NotBlank = true;
+        }
         field(5; "Profesor Jefe"; Code[10])
         {
+            Caption = 'Profesor Jefe';
             DataClassification = ToBeClassified;
             TableRelation = Profesor;
         }
@@ -27,6 +35,11 @@ table 50105 Departamento
         {
             Clustered = true;
         }
+    }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Departamento", Nombre, Despacho, "Profesor Jefe") { }
     }
 
 }

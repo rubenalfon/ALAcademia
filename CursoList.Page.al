@@ -1,5 +1,6 @@
 page 50105 "Cursos"
 {
+    Caption = 'Cursos';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
@@ -17,11 +18,11 @@ page 50105 "Cursos"
                 field(Descripcion; Rec.Descripcion)
                 {
                     ApplicationArea = All;
-                    Caption = 'Descripción';
+                    Caption = 'DescripciÃ³n';
                 }
                 field("Horas Totales"; Rec."Horas Totales") { ApplicationArea = All; }
                 field("Tarifa Laboratorio"; Rec."Tarifa Laboratorio") { ApplicationArea = All; }
-                field(Profesor; Rec.Profesor) { ApplicationArea = All; }
+                field(Profesor; Rec."Id Profesor") { ApplicationArea = All; }
             }
         }
     }

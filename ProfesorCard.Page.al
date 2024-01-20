@@ -12,11 +12,30 @@ page 50110 "Carta Profesor"
             group(General)
             {
                 Caption = 'General';
-                field("Id Profesor"; Rec."Id Profesor") { ApplicationArea = All; }
-                field(Nombre; Rec.Nombre) { ApplicationArea = All; }
-                field(Telefono; Rec.Telefono) { ApplicationArea = All; }
-                field(Salario; Rec.Salario) { ApplicationArea = All; }
-                field("Fecha Contratacion"; Rec."Fecha Contratacion") { ApplicationArea = All; }
+                field("Id Profesor"; Rec."Id Profesor")
+                {
+                    ApplicationArea = All;
+                }
+                field(Nombre; Rec.Nombre)
+                {
+                    ApplicationArea = All;
+                }
+                field(Telefono; Rec.Telefono)
+                {
+                    ApplicationArea = All;
+                }
+                field("Id Departamento"; Rec."Id Departamento")
+                {
+                    ApplicationArea = All;
+                }
+                field(Salario; Rec.Salario)
+                {
+                    ApplicationArea = All;
+                }
+                field("Fecha Contratacion"; Rec."Fecha Contratacion")
+                {
+                    ApplicationArea = All;
+                }
                 field("Num. Ayudantes"; Rec."Num. Ayudantes")
                 {
                     ApplicationArea = All;

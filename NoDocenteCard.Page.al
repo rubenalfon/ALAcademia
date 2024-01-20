@@ -19,13 +19,18 @@ page 50106 "Carta No Docente"
                 field(Salario; Rec.Salario) { ApplicationArea = All; }
                 field("Id Profesor"; Rec."Id Profesor")
                 {
+                    Caption = 'Profesor';
                     ApplicationArea = All;
                 }
             }
             group(GroupDireccion)
             {
                 Caption = 'Dirección';
-                field(Direccion; Rec.Direccion) { ApplicationArea = All; }
+                field(Direccion; Rec.Direccion)
+                {
+                    Caption = 'Dirección';
+                    ApplicationArea = All;
+                }
                 field("Cod. Pais"; Rec."Cod. Pais") { ApplicationArea = All; }
                 field(Poblacion; Rec.Poblacion) { ApplicationArea = All; }
                 field(Region; Rec.Region) { ApplicationArea = All; }

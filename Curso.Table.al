@@ -1,5 +1,6 @@
 table 50104 Curso
 {
+    Caption = 'Curso';
     DataClassification = ToBeClassified;
     DrillDownPageId = Cursos;
 
@@ -7,19 +8,32 @@ table 50104 Curso
     {
         field(1; "Id Curso"; Code[10])
         {
+            Caption = 'Id Curso';
             DataClassification = ToBeClassified;
             NotBlank = true;
         }
-        field(2; "Nombre"; Text[100]) { NotBlank = true; }
+        field(2; "Nombre"; Text[100])
+        {
+            Caption = 'Nombre';
+            NotBlank = true;
+        }
         field(3; Descripcion; Text[100])
         {
+            Caption = 'DescripciÃ³n';
             NotBlank = true;
-            Caption = 'Descripción';
         }
-        field(4; "Horas Totales"; Integer) { NotBlank = true; }
-        field(5; "Tarifa Laboratorio"; Decimal) { }
-        field(6; "Profesor"; Code[10])
+        field(4; "Horas Totales"; Integer)
         {
+            Caption = 'Horas Totales';
+            NotBlank = true;
+        }
+        field(5; "Tarifa Laboratorio"; Decimal)
+        {
+            Caption = 'Tarifa Laboratorio';
+        }
+        field(6; "Id Profesor"; Code[10])
+        {
+            Caption = 'Profesor';
             TableRelation = Profesor;
         }
     }

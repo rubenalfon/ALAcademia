@@ -1,6 +1,6 @@
 page 50102 "Matriculas"
 {
-    Caption = 'Matrículas';
+    Caption = 'MatrÃ­culas';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
@@ -16,7 +16,7 @@ page 50102 "Matriculas"
                 field("Id Matricula"; Rec."Id Matricula") { ApplicationArea = All; }
                 field("Fecha Matricula"; Rec."Fecha Matricula") { ApplicationArea = All; }
                 field("Hora Matricula"; Rec."Hora Matricula") { ApplicationArea = All; }
-                field("Alumno Referencia"; Rec."Alumno Referencia") { ApplicationArea = All; DrillDownPageId = Alumno; }
+                field("Alumno Referencia"; Rec."Alumno Referencia") { ApplicationArea = All; DrillDownPageId = Alumnos; }
                 field("Curso Referencia"; Rec."Curso Referencia") { ApplicationArea = All; DrillDownPageId = Cursos; }
             }
         }
