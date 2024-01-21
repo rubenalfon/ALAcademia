@@ -23,6 +23,10 @@ page 50105 "Cursos"
                 field("Horas Totales"; Rec."Horas Totales") { ApplicationArea = All; }
                 field("Tarifa Laboratorio"; Rec."Tarifa Laboratorio") { ApplicationArea = All; }
                 field(Profesor; Rec."Id Profesor") { ApplicationArea = All; }
+                field("Id Dept. Profesor"; Rec."Id Dept. Profesor")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }

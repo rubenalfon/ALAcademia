@@ -36,6 +36,17 @@ table 50104 Curso
             Caption = 'Profesor';
             TableRelation = Profesor;
         }
+        field(7; "Id Horario"; Code[10])
+        {
+            Caption = 'Horario';
+            TableRelation = Horario;
+        }
+        field(8; "Id Dept. Profesor"; Code[10])
+        {
+            Caption = 'Departamento';
+            FieldClass = FlowField;
+            CalcFormula = LOOKUP(Profesor."Id Departamento" WHERE("Id Profesor" = FIELD("Id Profesor")));
+        }
     }
 
     keys

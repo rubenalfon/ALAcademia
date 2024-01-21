@@ -44,4 +44,12 @@ table 50101 "Matricula"
             Clustered = true;
         }
     }
+
+    trigger OnInsert()
+    begin
+        "Fecha Matricula" := Today();
+        "Hora Matricula" := Time();
+    end;
 }
+
+
