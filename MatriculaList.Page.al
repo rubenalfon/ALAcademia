@@ -1,6 +1,6 @@
 page 50102 "Matriculas"
 {
-    Caption = 'Matrí­culas';
+    Caption = 'Matrículas';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
