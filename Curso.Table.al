@@ -18,7 +18,7 @@ table 50104 Curso
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'DescripciÃ³n';
+            Caption = 'Descripción';
             NotBlank = true;
         }
         field(4; "Horas Totales"; Integer)

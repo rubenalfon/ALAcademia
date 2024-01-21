@@ -7,14 +7,17 @@ table 50100 Alumno
     {
         field(1; "Id Alumno"; Code[10])
         {
+            Caption = 'Id Alumno';
             NotBlank = true;
         }
         field(2; Nombre; Text[100])
         {
+            Caption = 'Nombre';
             NotBlank = true;
         }
         field(3; Sexo; Option)
         {
+            Caption = 'Sexo';
             OptionMembers = Masculino,Femenino,Otro,"S/N";
             NotBlank = true;
         }

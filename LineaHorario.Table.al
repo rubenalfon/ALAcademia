@@ -1,13 +1,13 @@
 table 50102 "Linea Horario"
 {
-    Caption = 'LÃ­nea Horario';
+    Caption = 'Línea Horario';
     DrillDownPageId = "Lineas Horario";
 
     fields
     {
         field(1; "Id Linea Horario"; Code[10])
         {
-            Caption = 'Id LÃ­nea Horario';
+            Caption = 'Id Línea Horario';
             NotBlank = true;
         }
         field(2; "Id Horario"; Code[10])
@@ -24,7 +24,7 @@ table 50102 "Linea Horario"
         }
         field(4; "Dia"; Enum "Dias Semana")
         {
-            Caption = 'DÃ­a';
+            Caption = 'Día';
             NotBlank = true;
         }
         field(5; "Hora Inicio"; Time)
@@ -35,7 +35,7 @@ table 50102 "Linea Horario"
         }
         field(6; "Hora Fin"; Time)
         {
-            Caption = 'Hora FinalizaciÃ³n';
+            Caption = 'Hora Finalización';
             InitValue = 000000T;
             NotBlank = true;
         }
