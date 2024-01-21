@@ -70,18 +70,18 @@ table 50107 "Profesor"
                 WHERE("Country/Region Code" = FIELD("Cod. Pais"));
             ValidateTableRelation = false;
         }
-        field(12; "Num. Ayudantes"; Integer)
-        {
-            Caption = 'Num. Ayudantes';
-            FieldClass = FlowField;
-            CalcFormula = COUNT("No Docente" WHERE("Id Profesor" = FILTER(<> ''),
-            "Id Profesor" = FIELD("Id Profesor")));
-        }
-        field(13; "Num. Cursos"; Integer)
+        field(12; "Num. Cursos"; Integer)
         {
             Caption = 'Num. Cursos';
             FieldClass = FlowField;
             CalcFormula = COUNT(Curso WHERE("Id Profesor" = FILTER(<> ''),
+            "Id Profesor" = FIELD("Id Profesor")));
+        }
+        field(13; "Num. Ayudantes"; Integer)
+        {
+            Caption = 'Num. Ayudantes';
+            FieldClass = FlowField;
+            CalcFormula = COUNT("No Docente" WHERE("Id Profesor" = FILTER(<> ''),
             "Id Profesor" = FIELD("Id Profesor")));
         }
     }
