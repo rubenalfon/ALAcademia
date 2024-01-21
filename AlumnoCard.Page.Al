@@ -21,7 +21,7 @@ page 50101 Alumno
             }
             group(GroupDireccion)
             {
-                Caption = 'Dirección';
+                Caption = 'DirecciÃ³n';
                 field(Direccion; Rec.Direccion) { ApplicationArea = All; }
                 field("Cod. Pais"; Rec."Cod. Pais") { ApplicationArea = All; }
                 field(Poblacion; Rec.Poblacion) { ApplicationArea = All; }

@@ -64,4 +64,9 @@ table 50100 Alumno
             Clustered = true;
         }
     }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Alumno", Nombre, Sexo, Telefono, "Codigo postal") { }
+    }
 }

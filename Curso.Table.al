@@ -45,7 +45,12 @@ table 50104 Curso
         {
             Caption = 'Departamento';
             FieldClass = FlowField;
-            CalcFormula = LOOKUP(Profesor."Id Departamento" WHERE("Id Profesor" = FIELD("Id Profesor")));
+            CalcFormula = LOOKUP(Profesor."Id Departamento"
+            WHERE("Id Profesor" = FIELD("Id Profesor")));
+        }
+        field(9; "Tiene Horario Asociado"; Boolean)
+        {
+            Caption = 'Tiene Horario Asociado';
         }
     }
 
@@ -56,4 +61,10 @@ table 50104 Curso
             Clustered = true;
         }
     }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Curso", Nombre, Descripcion, "Horas Totales") { }
+    }
+
 }

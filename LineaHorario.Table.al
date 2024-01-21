@@ -11,24 +11,30 @@ table 50102 "Linea Horario"
             DataClassification = ToBeClassified;
             NotBlank = true;
         }
-        field(2; "Dia"; Text[100])
+        field(2; "Id Curso Horario"; Code[10])
+        {
+            Caption = 'Curso';
+            FieldClass = FlowField;
+            CalcFormula = LOOKUP(Horario."Id Curso" WHERE("Id Horario" = FIELD("Id Horario")));
+        }
+        field(3; "Dia"; Enum "Dias Semana")
         {
             Caption = 'Día';
             NotBlank = true;
         }
-        field(3; "Hora Inicio"; Time)
+        field(4; "Hora Inicio"; Time)
         {
             Caption = 'Hora Inicio';
             NotBlank = true;
         }
-        field(4; "Hora Fin"; Time)
+        field(5; "Hora Fin"; Time)
         {
             Caption = 'Hora Fin';
             NotBlank = true;
         }
-        field(5; "Id Horario"; Code[10])
+        field(6; "Id Horario"; Code[10])
         {
-            Caption = 'Id Horario';
+            Caption = 'Horario';
             DataClassification = ToBeClassified;
             TableRelation = Horario;
         }

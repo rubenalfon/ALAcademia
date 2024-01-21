@@ -13,6 +13,11 @@ page 50103 "Lineas Horario"
             {
                 ShowCaption = false;
                 field("Id Linea Horario"; Rec."Id Linea Horario") { ApplicationArea = All; }
+                field("Id Curso Horario"; Rec."Id Curso Horario")
+                {
+                    Caption = 'Curso';
+                    ApplicationArea = All;
+                }
                 field("Dia"; Rec."Dia") { ApplicationArea = All; }
                 field("Hora Inicio"; Rec."Hora Inicio") { ApplicationArea = All; }
                 field("Hora Fin"; Rec."Hora Fin") { ApplicationArea = All; }
