@@ -1,8 +1,8 @@
 table 50104 Curso
 {
     Caption = 'Curso';
-    DataClassification = ToBeClassified;
     DrillDownPageId = Cursos;
+    LookupPageId = Cursos;
 
     fields
     {
@@ -35,6 +35,22 @@ table 50104 Curso
             Caption = 'Profesor';
             TableRelation = Profesor;
         }
+        field(7; "Id Horario"; Code[10])
+        {
+            Caption = 'Horario';
+            TableRelation = Horario;
+        }
+        field(8; "Id Dept. Profesor"; Code[10])
+        {
+            Caption = 'Departamento';
+            FieldClass = FlowField;
+            CalcFormula = LOOKUP(Profesor."Id Departamento"
+            WHERE("Id Profesor" = FIELD("Id Profesor")));
+        }
+        field(9; "Tiene Horario Asociado"; Boolean)
+        {
+            Caption = 'Tiene Horario Asociado';
+        }
     }
 
     keys
@@ -44,4 +60,10 @@ table 50104 Curso
             Clustered = true;
         }
     }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Curso", Nombre, Descripcion, "Horas Totales") { }
+    }
+
 }

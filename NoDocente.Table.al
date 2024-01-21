@@ -1,7 +1,6 @@
 table 50106 "No Docente"
 {
     Caption = 'No Docente';
-    DataClassification = ToBeClassified;
     DrillDownPageId = "No Docentes";
 
     fields
@@ -9,7 +8,6 @@ table 50106 "No Docente"
         field(1; "Id No Docente"; Code[10])
         {
             Caption = 'Id No Docente';
-            DataClassification = ToBeClassified;
             NotBlank = true;
         }
         field(2; Nombre; Text[100])
@@ -27,8 +25,14 @@ table 50106 "No Docente"
             Caption = 'Salario';
             NotBlank = true;
         }
-        field(5; Telefono; BigInteger) { Caption = 'Teléfono'; }
-        field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
+        field(5; Telefono; BigInteger)
+        {
+            Caption = 'Teléfono';
+        }
+        field(6; Direccion; Text[100])
+        {
+            Caption = 'Dirección';
+        }
         field(7; "Cod. Pais"; Code[10])
         {
             Caption = 'Cód. país/región';
@@ -60,7 +64,6 @@ table 50106 "No Docente"
         field(11; "Id Profesor"; Code[10])
         {
             Caption = 'Id Profesor';
-            DataClassification = ToBeClassified;
             TableRelation = Profesor;
         }
     }

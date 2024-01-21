@@ -1,8 +1,8 @@
 table 50105 Departamento
 {
     Caption = 'Departamento';
-    DataClassification = ToBeClassified;
     DrillDownPageId = Departamentos;
+    LookupPageId = Departamentos;
 
     fields
     {
@@ -24,8 +24,13 @@ table 50105 Departamento
         field(5; "Profesor Jefe"; Code[10])
         {
             Caption = 'Profesor Jefe';
-            DataClassification = ToBeClassified;
             TableRelation = Profesor;
+        }
+        field(4; "Promedio Tarifas"; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = AVERAGE(Curso."Tarifa Laboratorio"
+            WHERE("Id Dept. Profesor" = FIELD("Id Departamento")));
         }
     }
 

@@ -12,8 +12,21 @@ page 50104 Horarios
             repeater(GroupName)
             {
                 ShowCaption = false;
-                field("Id Horario"; Rec."Id Horario") { ApplicationArea = All; }
-                field(Nombre; Rec.Nombre) { ApplicationArea = All; }
+                field("Id Horario"; Rec."Id Horario")
+                {
+                    Caption = 'Id Horario';
+                    ApplicationArea = All;
+                }
+                field(Nombre; Rec.Nombre)
+                {
+                    Caption = 'Nombre';
+                    ApplicationArea = All;
+                }
+                field("Id Curso"; Rec."Id Curso")
+                {
+                    Caption = 'Curso';
+                    ApplicationArea = All;
+                }
             }
         }
     }

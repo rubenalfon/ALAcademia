@@ -1,14 +1,13 @@
 table 50101 "Matricula"
 {
-    Caption = 'Matrí­cula';
-    DataClassification = ToBeClassified;
-    DrillDownPageID = "Matriculas";
+    Caption = 'MatrÃ­cula';
+    DrillDownPageID = Matriculas;
 
     fields
     {
         field(1; "Id Matricula"; Code[10])
         {
-            Caption = 'Id Matrí­cula';
+            Caption = 'Id MatrÃ­cula';
             NotBlank = true;
         }
         field(2; "Fecha Matricula"; Date)
@@ -24,16 +23,13 @@ table 50101 "Matricula"
         field(4; "Alumno Referencia"; Code[10])
         {
             Caption = 'Alumno Referencia';
-            DataClassification = ToBeClassified;
             TableRelation = Alumno;
         }
         field(5; "Curso Referencia"; Code[10])
         {
             Caption = 'Curso Referencia';
-            DataClassification = ToBeClassified;
             TableRelation = Curso;
         }
-
     }
 
     keys
@@ -43,4 +39,12 @@ table 50101 "Matricula"
             Clustered = true;
         }
     }
+
+    trigger OnInsert()
+    begin
+        "Fecha Matricula" := Today();
+        "Hora Matricula" := Time();
+    end;
 }
+
+

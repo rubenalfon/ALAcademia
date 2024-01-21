@@ -1,7 +1,6 @@
 table 50107 "Profesor"
 {
     Caption = 'Profesor';
-    DataClassification = ToBeClassified;
     DrillDownPageId = Profesores;
 
     fields
@@ -9,7 +8,6 @@ table 50107 "Profesor"
         field(1; "Id Profesor"; Code[10])
         {
             Caption = 'Id Profesor';
-            DataClassification = ToBeClassified;
             NotBlank = true;
         }
         field(2; Nombre; Text[100])
@@ -30,7 +28,6 @@ table 50107 "Profesor"
         field(5; "Id Departamento"; Code[10])
         {
             Caption = 'Departamento';
-            DataClassification = ToBeClassified;
             TableRelation = Departamento;
         }
         field(6; Telefono; BigInteger)
@@ -44,7 +41,6 @@ table 50107 "Profesor"
         field(8; "Cod. Pais"; Code[10])
         {
             Caption = 'Cód. país/región';
-            DataClassification = ToBeClassified;
             TableRelation = "Country/Region";
         }
         field(9; Poblacion; Text[100])
@@ -70,12 +66,14 @@ table 50107 "Profesor"
                 WHERE("Country/Region Code" = FIELD("Cod. Pais"));
             ValidateTableRelation = false;
         }
+        // Filtrar el numero de cursos que imparte cada profesor por día de la semana
         field(12; "Num. Cursos"; Integer)
         {
             Caption = 'Num. Cursos';
             FieldClass = FlowField;
             CalcFormula = COUNT(Curso WHERE("Id Profesor" = FILTER(<> ''),
             "Id Profesor" = FIELD("Id Profesor")));
+            //"Linea Horario" WHERE("Dias Semana" = FIELD("Dias Semana")));
         }
         field(13; "Num. Ayudantes"; Integer)
         {
@@ -83,6 +81,10 @@ table 50107 "Profesor"
             FieldClass = FlowField;
             CalcFormula = COUNT("No Docente" WHERE("Id Profesor" = FILTER(<> ''),
             "Id Profesor" = FIELD("Id Profesor")));
+        }
+        field(14; "Dias Semana"; Enum "Dias Semana")
+        {
+            FieldClass = FlowFilter;
         }
     }
 
