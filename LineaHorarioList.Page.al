@@ -16,16 +16,8 @@ page 50103 "Lineas Horario"
                 field("Dia"; Rec."Dia") { ApplicationArea = All; }
                 field("Hora Inicio"; Rec."Hora Inicio") { ApplicationArea = All; }
                 field("Hora Fin"; Rec."Hora Fin") { ApplicationArea = All; }
-                field("Id Horario"; Rec."Id Horario")
-                {
-                    ApplicationArea = All;
-                    DrillDownPageId = Horarios;
-                }
+                field("Id Horario"; Rec."Id Horario") { ApplicationArea = All; }
             }
-        }
-        area(Factboxes)
-        {
-
         }
     }
 }

@@ -1,19 +1,19 @@
 table 50102 "Linea Horario"
 {
-    Caption = 'LÃ­nea Horario';
+    Caption = 'Lí­nea Horario';
     DataClassification = ToBeClassified;
+    DrillDownPageId = "Lineas Horario";
 
     fields
     {
         field(1; "Id Linea Horario"; Code[10])
         {
-            Caption = 'Id LÃ­nea Horario';
-            DataClassification = ToBeClassified;
+            Caption = 'Id Lí­nea Horario';
             NotBlank = true;
         }
         field(2; "Dia"; Text[100])
         {
-            Caption = 'DÃ­a';
+            Caption = 'Dí­a';
             NotBlank = true;
         }
         field(3; "Hora Inicio"; Time)

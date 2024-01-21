@@ -9,7 +9,6 @@ table 50104 Curso
         field(1; "Id Curso"; Code[10])
         {
             Caption = 'Id Curso';
-            DataClassification = ToBeClassified;
             NotBlank = true;
         }
         field(2; "Nombre"; Text[100])
@@ -19,7 +18,7 @@ table 50104 Curso
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'DescripciÃ³n';
+            Caption = 'Descripción';
             NotBlank = true;
         }
         field(4; "Horas Totales"; Integer)

@@ -2,13 +2,13 @@ table 50103 Horario
 {
     Caption = 'Horario';
     DataClassification = ToBeClassified;
+    DrillDownPageId = Horarios;
 
     fields
     {
         field(1; "Id Horario"; Code[10])
         {
             Caption = 'Id Horario';
-            DataClassification = ToBeClassified;
             NotBlank = true;
         }
         field(2; "Nombre"; Text[100])

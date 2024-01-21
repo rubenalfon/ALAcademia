@@ -16,9 +16,5 @@ page 50104 Horarios
                 field(Nombre; Rec.Nombre) { ApplicationArea = All; }
             }
         }
-        area(Factboxes)
-        {
-
-        }
     }
 }
