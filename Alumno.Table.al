@@ -1,6 +1,5 @@
 table 50100 Alumno
 {
-    DataClassification = ToBeClassified;
     Caption = 'Alumno';
     DrillDownPageId = Alumnos;
 
@@ -32,7 +31,10 @@ table 50100 Alumno
             Caption = 'Fecha Nacimiento';
             NotBlank = true;
         }
-        field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
+        field(6; Direccion; Text[100])
+        {
+            Caption = 'Dirección';
+        }
         field(7; "Cod. Pais"; Code[10])
         {
             Caption = 'Cód. país/región';
@@ -68,5 +70,10 @@ table 50100 Alumno
         {
             Clustered = true;
         }
+    }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Alumno", Nombre, Sexo, Telefono, "Codigo postal") { }
     }
 }
