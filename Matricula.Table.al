@@ -1,7 +1,7 @@
 table 50101 "Matricula"
 {
     Caption = 'Matrícula';
-    //DrillDownPageID = "lista Matricula";
+    DrillDownPageID = Matriculas;
 
     fields
     {

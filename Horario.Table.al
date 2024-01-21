@@ -1,6 +1,7 @@
 table 50103 Horario
 {
     Caption = 'Horario';
+    DrillDownPageId = Horarios;
 
     fields
     {

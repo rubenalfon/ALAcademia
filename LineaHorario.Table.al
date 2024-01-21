@@ -1,6 +1,7 @@
 table 50102 "Linea Horario"
 {
     Caption = 'Línea Horario';
+    DrillDownPageId = "Lineas Horario";
 
     fields
     {

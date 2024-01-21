@@ -1,7 +1,7 @@
 table 50100 Alumno
 {
     Caption = 'Alumno';
-    LookupPageId = Alumnos;
+    DrillDownPageId = Alumnos;
 
     fields
     {
