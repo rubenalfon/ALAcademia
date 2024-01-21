@@ -17,6 +17,10 @@ page 50107 Departamentos
                 field(Nombre; Rec.Nombre) { ApplicationArea = All; }
                 field(Despacho; Rec.Despacho) { ApplicationArea = All; }
                 field("Profesor Jefe"; Rec."Profesor Jefe") { ApplicationArea = All; }
+                field("Promedio Tarifas"; Rec."Promedio Tarifas")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }

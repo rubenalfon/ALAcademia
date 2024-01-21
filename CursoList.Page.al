@@ -4,7 +4,9 @@ page 50105 "Cursos"
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
+    Editable = false;
     SourceTable = Curso;
+    CardPageId = "Carta Curso";
 
     layout
     {

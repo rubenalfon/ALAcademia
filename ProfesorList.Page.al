@@ -19,6 +19,10 @@ page 50109 Profesores
                 field(Telefono; Rec.Telefono) { ApplicationArea = All; }
                 field(Salario; Rec.Salario) { ApplicationArea = All; }
                 field("Fecha Contratacion"; Rec."Fecha Contratacion") { ApplicationArea = All; }
+                field("Num. Cursos"; Rec."Num. Cursos")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
