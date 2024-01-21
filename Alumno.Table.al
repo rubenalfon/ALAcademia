@@ -8,10 +8,12 @@ table 50100 Alumno
     {
         field(1; "Id Alumno"; Code[10])
         {
-            DataClassification = ToBeClassified;
             NotBlank = true;
         }
-        field(2; Nombre; Text[100]) { NotBlank = true; }
+        field(2; Nombre; Text[100])
+        {
+            NotBlank = true;
+        }
         field(3; Sexo; Option)
         {
             OptionMembers = Masculino,Femenino,Otro,"S/N";
@@ -27,7 +29,10 @@ table 50100 Alumno
             Caption = 'Fecha Nacimiento';
             NotBlank = true;
         }
-        field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
+        field(6; Direccion; Text[100])
+        {
+            Caption = 'Dirección';
+        }
         field(7; "Cod. Pais"; Code[10])
         {
             Caption = 'Cód. país/región';
