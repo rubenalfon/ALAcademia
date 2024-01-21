@@ -48,32 +48,27 @@ page 50110 "Carta Profesor"
             group(GroupDireccion)
             {
                 Caption = 'Dirección';
-                field(Direccion; Rec.Direccion) { ApplicationArea = All; }
-                field("Cod. Pais"; Rec."Cod. Pais") { ApplicationArea = All; }
-                field(Poblacion; Rec.Poblacion) { ApplicationArea = All; }
-                field(Region; Rec.Region) { ApplicationArea = All; }
-                field("Codigo postal"; Rec."Codigo postal") { ApplicationArea = All; }
+                field(Direccion; Rec.Direccion)
+                {
+                    ApplicationArea = All;
+                }
+                field("Cod. Pais"; Rec."Cod. Pais")
+                {
+                    ApplicationArea = All;
+                }
+                field(Poblacion; Rec.Poblacion)
+                {
+                    ApplicationArea = All;
+                }
+                field(Region; Rec.Region)
+                {
+                    ApplicationArea = All;
+                }
+                field("Codigo postal"; Rec."Codigo postal")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
-
 }

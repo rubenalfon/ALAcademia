@@ -40,9 +40,5 @@ page 50103 "Lineas Horario"
 
             }
         }
-        area(Factboxes)
-        {
-
-        }
     }
 }

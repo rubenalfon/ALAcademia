@@ -1,7 +1,6 @@
 table 50104 Curso
 {
     Caption = 'Curso';
-    DataClassification = ToBeClassified;
     DrillDownPageId = Cursos;
 
     fields
@@ -9,7 +8,6 @@ table 50104 Curso
         field(1; "Id Curso"; Code[10])
         {
             Caption = 'Id Curso';
-            DataClassification = ToBeClassified;
             NotBlank = true;
         }
         field(2; "Nombre"; Text[100])

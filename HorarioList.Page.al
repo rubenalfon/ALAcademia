@@ -29,9 +29,5 @@ page 50104 Horarios
                 }
             }
         }
-        area(Factboxes)
-        {
-
-        }
     }
 }

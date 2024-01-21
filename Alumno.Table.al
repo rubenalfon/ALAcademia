@@ -1,6 +1,5 @@
 table 50100 Alumno
 {
-    DataClassification = ToBeClassified;
     Caption = 'Alumno';
     LookupPageId = Alumnos;
 

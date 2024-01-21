@@ -12,11 +12,26 @@ page 50106 "Carta No Docente"
             group(General)
             {
                 Caption = 'General';
-                field("Id No Docente"; Rec."Id No Docente") { ApplicationArea = All; }
-                field(Nombre; Rec.Nombre) { ApplicationArea = All; }
-                field(Telefono; Rec.Telefono) { ApplicationArea = All; }
-                field(Puesto; Rec.Puesto) { ApplicationArea = All; }
-                field(Salario; Rec.Salario) { ApplicationArea = All; }
+                field("Id No Docente"; Rec."Id No Docente")
+                {
+                    ApplicationArea = All;
+                }
+                field(Nombre; Rec.Nombre)
+                {
+                    ApplicationArea = All;
+                }
+                field(Telefono; Rec.Telefono)
+                {
+                    ApplicationArea = All;
+                }
+                field(Puesto; Rec.Puesto)
+                {
+                    ApplicationArea = All;
+                }
+                field(Salario; Rec.Salario)
+                {
+                    ApplicationArea = All;
+                }
                 field("Id Profesor"; Rec."Id Profesor")
                 {
                     Caption = 'Profesor';
@@ -31,31 +46,23 @@ page 50106 "Carta No Docente"
                     Caption = 'Dirección';
                     ApplicationArea = All;
                 }
-                field("Cod. Pais"; Rec."Cod. Pais") { ApplicationArea = All; }
-                field(Poblacion; Rec.Poblacion) { ApplicationArea = All; }
-                field(Region; Rec.Region) { ApplicationArea = All; }
-                field("Codigo postal"; Rec."Codigo postal") { ApplicationArea = All; }
+                field("Cod. Pais"; Rec."Cod. Pais")
+                {
+                    ApplicationArea = All;
+                }
+                field(Poblacion; Rec.Poblacion)
+                {
+                    ApplicationArea = All;
+                }
+                field(Region; Rec.Region)
+                {
+                    ApplicationArea = All;
+                }
+                field("Codigo postal"; Rec."Codigo postal")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
-            }
-        }
-    }
-
-    var
-        myInt: Integer;
-
 }
