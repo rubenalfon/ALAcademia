@@ -4,6 +4,7 @@ page 50109 Profesores
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
+    Editable = false;
     SourceTable = Profesor;
     CardPageID = "Carta Profesor";
 
@@ -35,6 +36,10 @@ page 50109 Profesores
                     ApplicationArea = All;
                 }
                 field("Num. Cursos"; Rec."Num. Cursos")
+                {
+                    ApplicationArea = All;
+                }
+                field("Total Tarifas"; Rec."Total Tarifas")
                 {
                     ApplicationArea = All;
                 }

@@ -18,7 +18,7 @@ table 50104 Curso
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'Descripción';
+            Caption = 'DescripciÃ³n';
             NotBlank = true;
         }
         field(4; "Horas Totales"; Integer)
@@ -51,6 +51,7 @@ table 50104 Curso
         {
             Caption = 'Tiene Horario Asociado';
         }
+
     }
 
     keys

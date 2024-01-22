@@ -28,6 +28,7 @@ table 50105 Departamento
         }
         field(4; "Promedio Tarifas"; Decimal)
         {
+            Editable = false;
             FieldClass = FlowField;
             CalcFormula = AVERAGE(Curso."Tarifa Laboratorio"
             WHERE("Id Dept. Profesor" = FIELD("Id Departamento")));

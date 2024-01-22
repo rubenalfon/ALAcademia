@@ -1,23 +1,23 @@
 table 50101 "Matricula"
 {
-    Caption = 'Matrícula';
+    Caption = 'MatrÃ­cula';
     DrillDownPageID = Matriculas;
 
     fields
     {
         field(1; "Id Matricula"; Code[10])
         {
-            Caption = 'Id Matrícula';
+            Caption = 'Id MatrÃ­cula';
             NotBlank = true;
         }
         field(2; "Fecha Matricula"; Date)
         {
-            Caption = 'Fecha Matrícula';
+            Caption = 'Fecha MatrÃ­cula';
             NotBlank = true;
         }
         field(3; "Hora Matricula"; Time)
         {
-            Caption = 'Hora Matrícula';
+            Caption = 'Hora MatrÃ­cula';
             NotBlank = true;
         }
         field(4; "Alumno Referencia"; Code[10])

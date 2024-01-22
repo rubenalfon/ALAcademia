@@ -66,7 +66,6 @@ table 50107 "Profesor"
                 WHERE("Country/Region Code" = FIELD("Cod. Pais"));
             ValidateTableRelation = false;
         }
-        // Filtrar el numero de cursos que imparte cada profesor por día de la semana
         field(12; "Num. Cursos"; Integer)
         {
             Caption = 'Num. Cursos';
@@ -82,8 +81,22 @@ table 50107 "Profesor"
             CalcFormula = COUNT("No Docente" WHERE("Id Profesor" = FILTER(<> ''),
             "Id Profesor" = FIELD("Id Profesor")));
         }
-        field(14; "Dias Semana"; Enum "Dias Semana")
+        field(14; "Total Tarifas"; Decimal)
         {
+            Caption = 'Total Tarifas';
+            FieldClass = FlowField;
+            CalcFormula = SUM(Curso."Tarifa Laboratorio"
+            WHERE("Id Profesor" = FIELD("Id Profesor"),
+            "Tarifa Laboratorio" = FIELD("Tarifas Filter")));
+        }
+        field(15; "Tarifas Filter"; Decimal)
+        {
+            FieldClass = FlowFilter;
+        }
+
+        field(16; "Dias Semana"; Enum "Dias Semana")
+        {
+            Caption = 'Días Semana';
             FieldClass = FlowFilter;
         }
     }
