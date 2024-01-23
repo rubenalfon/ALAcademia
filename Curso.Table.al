@@ -47,11 +47,6 @@ table 50104 Curso
             CalcFormula = LOOKUP(Profesor."Id Departamento"
             WHERE("Id Profesor" = FIELD("Id Profesor")));
         }
-        field(9; "Tiene Horario Asociado"; Boolean)
-        {
-            Caption = 'Tiene Horario Asociado';
-        }
-
     }
 
     keys
