@@ -2,50 +2,40 @@ table 50107 "Profesor"
 {
     Caption = 'Profesor';
     DrillDownPageId = Profesores;
+    DataCaptionFields = "Id Profesor", Nombre;
 
     fields
     {
         field(1; "Id Profesor"; Code[10])
         {
-            Caption = 'Id Profesor';
             NotBlank = true;
         }
         field(2; Nombre; Text[100])
         {
-            Caption = 'Nombre';
             NotBlank = true;
         }
         field(3; Salario; Decimal)
         {
-            Caption = 'Salario';
             NotBlank = true;
         }
         field(4; "Fecha Contratacion"; Date)
         {
-            Caption = 'Fecha Contratación';
             NotBlank = true;
         }
         field(5; "Id Departamento"; Code[10])
         {
-            Caption = 'Departamento';
             TableRelation = Departamento;
         }
         field(6; Telefono; BigInteger)
-        {
-            Caption = 'Teléfono';
-        }
+        { }
         field(7; Direccion; Text[100])
-        {
-            Caption = 'Dirección';
-        }
+        { }
         field(8; "Cod. Pais"; Code[10])
         {
-            Caption = 'Cód. país/región';
             TableRelation = "Country/Region";
         }
         field(9; Poblacion; Text[100])
         {
-            Caption = 'Población';
             TableRelation = IF ("Cod. Pais" = CONST('')) "Post Code".City
             // "Cod. Pais" no es vacío
             ELSE
@@ -54,12 +44,9 @@ table 50107 "Profesor"
             ValidateTableRelation = false;
         }
         field(10; Region; Text[100])
-        {
-            Caption = 'Región/Comunidad Autónoma';
-        }
+        { }
         field(11; "Codigo postal"; Code[10])
         {
-            Caption = 'Código postal';
             TableRelation = IF ("Cod. Pais" = CONST('')) "Post Code"
             ELSE
             IF ("Cod. Pais" = FILTER(<> '')) "Post Code"
@@ -68,7 +55,6 @@ table 50107 "Profesor"
         }
         field(12; "Num. Cursos"; Integer)
         {
-            Caption = 'Num. Cursos';
             FieldClass = FlowField;
             CalcFormula = COUNT(Curso WHERE("Id Profesor" = FILTER(<> ''),
             "Id Profesor" = FIELD("Id Profesor")));
@@ -76,14 +62,12 @@ table 50107 "Profesor"
         }
         field(13; "Num. Ayudantes"; Integer)
         {
-            Caption = 'Num. Ayudantes';
             FieldClass = FlowField;
             CalcFormula = COUNT("No Docente" WHERE("Id Profesor" = FILTER(<> ''),
             "Id Profesor" = FIELD("Id Profesor")));
         }
         field(14; "Total Tarifas"; Decimal)
         {
-            Caption = 'Total Tarifas';
             FieldClass = FlowField;
             CalcFormula = SUM(Curso."Tarifa Laboratorio"
             WHERE("Id Profesor" = FIELD("Id Profesor"),
@@ -96,7 +80,6 @@ table 50107 "Profesor"
 
         field(16; "Dias Semana"; Enum "Dias Semana")
         {
-            Caption = 'Días Semana';
             FieldClass = FlowFilter;
         }
     }
@@ -111,7 +94,7 @@ table 50107 "Profesor"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Id Profesor", Nombre, Poblacion, "Codigo postal") { Caption = 'Profesor'; }
+        fieldgroup(DropDown; "Id Profesor", Nombre, Poblacion, "Codigo postal") { Caption = 'Teacher', comment = 'ESP="Profesor"'; }
     }
 
 }
