@@ -2,11 +2,13 @@ page 50100 "Alumnos"
 {
     Caption = 'Alumnos';
     PageType = List;
-    Editable = false; // Para obligar a meter datos en card
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Alumno;
-    CardPageId = Alumno; // De lista a card
+    Editable = false;
+    DeleteAllowed = false;
+    InsertAllowed = false;
+    CardPageId = "Ficha Alumno";
 
     layout
     {
