@@ -1,6 +1,6 @@
 page 50110 "Carta Profesor"
 {
-    Caption = 'Ficha Profesor';
+    Caption = 'Teacher Card', comment = 'ESP="Ficha Profesor"';
     PageType = Card;
     RefreshOnActivate = true;
     SourceTable = Profesor;
@@ -11,7 +11,7 @@ page 50110 "Carta Profesor"
         {
             group(General)
             {
-                Caption = 'General';
+                Caption = 'General', comment = 'ESP="General"';
                 field("Id Profesor"; Rec."Id Profesor")
                 {
                     Caption = 'No.', comment = 'ESP="Nº"';
