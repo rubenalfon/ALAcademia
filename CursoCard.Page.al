@@ -55,10 +55,10 @@ page 50111 "Ficha Curso"
                     ApplicationArea = All;
                 }
             }
-            part(Horario; "horario")
-            {
-                ApplicationArea = All;
-            }
+            // part(Horario; "horario")
+            // {
+            //     ApplicationArea = All;
+            // }
         }
         area(FactBoxes)
         {
