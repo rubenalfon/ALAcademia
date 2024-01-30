@@ -21,6 +21,7 @@ page 50111 "Ficha Curso"
                 {
                     Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
+                    Importance = Promoted;
                 }
                 field(Descripcion; Rec.Descripcion)
                 {
@@ -32,22 +33,41 @@ page 50111 "Ficha Curso"
                     Caption = 'Total hours', comment = 'ESP="Horas totales"';
                     ApplicationArea = All;
                 }
+                field("Tarifa Laboratorio"; Rec."Tarifa Laboratorio")
+                {
+                    Caption = 'Lab fee', comment = 'ESP="Tarifa laboratorio"';
+                    ApplicationArea = All;
+                    Importance = Additional;
+                }
+            }
+            group(Profesor)
+            {
+                Caption = 'Teacher', comment = 'ESP="Profesor"';
                 field("Id Profesor"; Rec."Id Profesor")
                 {
-                    Caption = 'Teacher', comment = 'ESP="Profesor"';
+                    Caption = 'Teacher No', comment = 'ESP="Profesor"';
                     ApplicationArea = All;
+                    Importance = Promoted;
                 }
                 field("Id Dept. Profesor"; Rec."Id Dept. Profesor")
                 {
                     Caption = 'Department', comment = 'ESP="Departamento"';
                     ApplicationArea = All;
                 }
-                field("Tarifa Laboratorio"; Rec."Tarifa Laboratorio")
-                {
-                    Caption = 'Lab fee', comment = 'ESP="Tarifa laboratorio"';
-                    ApplicationArea = All;
-                }
+            }
+            part(Horario; "horario")
+            {
+                ApplicationArea = All;
             }
         }
+        area(FactBoxes)
+        {
+            part("Curso Card Factbox"; "Curso Card Factbox")
+            {
+                ApplicationArea = All;
+                SubPageLink = "Id Curso" = field("Id Curso");
+            }
+        }
+
     }
 }
