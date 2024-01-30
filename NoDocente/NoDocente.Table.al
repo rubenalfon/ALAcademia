@@ -2,6 +2,7 @@ table 50106 "No Docente"
 {
     Caption = 'No Docente';
     DrillDownPageId = "No Docentes";
+    LookupPageId = "No Docentes";
 
     fields
     {

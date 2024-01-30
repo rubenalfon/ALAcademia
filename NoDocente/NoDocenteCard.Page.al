@@ -4,6 +4,7 @@ page 50106 "Carta No Docente"
     PageType = Card;
     RefreshOnActivate = true;
     SourceTable = "No Docente";
+    DataCaptionFields = "Id No Docente", Nombre;
 
     layout
     {

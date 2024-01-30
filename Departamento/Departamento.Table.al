@@ -1,6 +1,7 @@
 table 50105 Departamento
 {
     DrillDownPageId = Departamentos;
+    LookupPageId = Departamentos;
 
     fields
     {
