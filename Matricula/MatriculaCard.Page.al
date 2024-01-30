@@ -52,11 +52,28 @@ page 50113 "Carta Matricula"
         {
             action(InformacionCurso)
             {
-                Caption = 'Course Info.', comment = 'ESP="Info. Curso"';
+                Caption = 'Course', comment = 'ESP="Curso"';
                 ApplicationArea = All;
                 RunObject = page "Carta Curso";
-                Image = Navigate;
+                Image = Certificate;
                 RunPageLink = "Id Curso" = field("Curso Referencia");
+            }
+
+            action(DatosEstudiante)
+            {
+                Caption = 'Student', comment = 'ESP="Estudiante"';
+                ApplicationArea = All;
+                RunObject = page Alumno;
+                Image = User;
+                RunPageLink = "Id Alumno" = field("Alumno Referencia");
+            }
+
+            action(MatriculasEstudiante)
+            {
+                Caption = 'Tuitions', comment = 'ESP="Matrículas"';
+                ApplicationArea = All;
+                RunObject = page Matriculas;
+                Image = SocialSecurityLines;
             }
         }
     }
