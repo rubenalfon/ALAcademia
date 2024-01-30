@@ -1,23 +1,40 @@
-table 50100 "Alumno"
+table 50100 Alumno
 {
-    DataClassification = ToBeClassified;
     Caption = 'Alumno';
-    DrillDownPageId = "Lista Matricula";
+    DrillDownPageId = Alumnos;
 
     fields
     {
         field(1; "Id Alumno"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            Caption = 'Id Alumno';
+            NotBlank = true;
         }
-        field(2; Nombre; Text[100]) { }
+        field(2; Nombre; Text[100])
+        {
+            Caption = 'Nombre';
+            NotBlank = true;
+        }
         field(3; Sexo; Option)
         {
+            Caption = 'Sexo';
             OptionMembers = Masculino,Femenino,Otro,"S/N";
+            NotBlank = true;
         }
-        field(4; Telefono; BigInteger) { Caption = 'Teléfono'; }
-        field(5; "Fecha Nacimiento"; Date) { Caption = 'Fecha Nacimiento'; }
-        field(6; Direccion; Text[100]) { Caption = 'Dirección'; }
+        field(4; Telefono; BigInteger)
+        {
+            Caption = 'Teléfono';
+            NotBlank = true;
+        }
+        field(5; "Fecha Nacimiento"; Date)
+        {
+            Caption = 'Fecha Nacimiento';
+            NotBlank = true;
+        }
+        field(6; Direccion; Text[100])
+        {
+            Caption = 'Dirección';
+        }
         field(7; "Cod. Pais"; Code[10])
         {
             Caption = 'Cód. país/región';
@@ -53,5 +70,10 @@ table 50100 "Alumno"
         {
             Clustered = true;
         }
+    }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Alumno", Nombre, Sexo, Telefono, "Codigo postal") { }
     }
 }

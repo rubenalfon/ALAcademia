@@ -1,4 +1,4 @@
-page 50100 "Lista Alumno"
+page 50100 "Alumnos"
 {
     Caption = 'Alumnos';
     PageType = List;
@@ -6,7 +6,7 @@ page 50100 "Lista Alumno"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Alumno;
-    CardPageId = "Carta Alumno"; // De lista a card
+    CardPageId = Alumno; // De lista a card
 
     layout
     {
@@ -15,10 +15,22 @@ page 50100 "Lista Alumno"
             repeater(GroupName)
             {
                 ShowCaption = false;
-                field("Id Alumno"; Rec."Id Alumno") { ApplicationArea = All; }
-                field(Nombre; Rec.Nombre) { ApplicationArea = All; }
-                field(Sexo; Rec.Sexo) { ApplicationArea = All; }
-                field(Telefono; Rec.Telefono) { ApplicationArea = All; }
+                field("Id Alumno"; Rec."Id Alumno")
+                {
+                    ApplicationArea = All;
+                }
+                field(Nombre; Rec.Nombre)
+                {
+                    ApplicationArea = All;
+                }
+                field(Sexo; Rec.Sexo)
+                {
+                    ApplicationArea = All;
+                }
+                field(Telefono; Rec.Telefono)
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }

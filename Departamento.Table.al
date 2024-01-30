@@ -1,23 +1,31 @@
-table 50104 Departamento
+table 50105 Departamento
 {
-    Caption = 'Departamento';
-    DataClassification = ToBeClassified;
     DrillDownPageId = Departamentos;
 
     fields
     {
         field(1; "Id Departamento"; Code[10])
         {
-            DataClassification = ToBeClassified;
             NotBlank = true;
         }
-        field(2; Nombre; Text[100]) { NotBlank = true; }
-        field(3; Despacho; Text[100]) { NotBlank = true; }
-        field(4; Salario; Decimal) { NotBlank = true; }
+        field(2; Nombre; Text[100])
+        {
+            NotBlank = true;
+        }
+        field(3; Despacho; Text[100])
+        {
+            NotBlank = true;
+        }
         field(5; "Profesor Jefe"; Code[10])
         {
-            DataClassification = ToBeClassified;
             TableRelation = Profesor;
+        }
+        field(4; "Promedio Tarifas"; Decimal)
+        {
+            Editable = false;
+            FieldClass = FlowField;
+            CalcFormula = AVERAGE(Curso."Tarifa Laboratorio"
+            WHERE("Id Dept. Profesor" = FIELD("Id Departamento")));
         }
     }
 
@@ -27,6 +35,11 @@ table 50104 Departamento
         {
             Clustered = true;
         }
+    }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Departamento", Nombre, Despacho, "Profesor Jefe") { }
     }
 
 }

@@ -1,11 +1,9 @@
-page 50108 "No Docentes"
+page 50103 "Lineas Horario"
 {
-    Caption = 'No Docentes';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = "No Docente";
-    CardPageID = "Carta No Docente";
+    SourceTable = "Linea Horario";
 
     layout
     {
@@ -14,23 +12,28 @@ page 50108 "No Docentes"
             repeater(GroupName)
             {
                 ShowCaption = false;
-                field("Id No Docente"; Rec."Id No Docente")
+                field("Id Linea Horario"; Rec."Id Linea Horario")
+                {
+                    Caption = 'Línea Horario';
+                    ApplicationArea = All;
+                }
+                field("Id Horario"; Rec."Id Horario")
+                {
+                    ApplicationArea = All;
+                    DrillDownPageId = Horarios;
+                }
+                field("Id Curso Horario"; Rec."Id Curso Horario")
+                {
+                    Caption = 'Curso';
+                    ApplicationArea = All;
+                    DrillDownPageId = Cursos;
+                }
+                field("Dia"; Rec."Dia") { ApplicationArea = All; }
+                field("Hora Inicio"; Rec."Hora Inicio")
                 {
                     ApplicationArea = All;
                 }
-                field(Nombre; Rec.Nombre)
-                {
-                    ApplicationArea = All;
-                }
-                field(Telefono; Rec.Telefono)
-                {
-                    ApplicationArea = All;
-                }
-                field(Puesto; Rec.Puesto)
-                {
-                    ApplicationArea = All;
-                }
-                field(Salario; Rec.Salario)
+                field("Hora Fin"; Rec."Hora Fin")
                 {
                     ApplicationArea = All;
                 }

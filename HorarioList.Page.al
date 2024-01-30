@@ -1,11 +1,10 @@
-page 50108 "No Docentes"
+page 50104 Horarios
 {
-    Caption = 'No Docentes';
+    Caption = 'Schedules', comment = 'ESP="Horarios"';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = "No Docente";
-    CardPageID = "Carta No Docente";
+    SourceTable = Horario;
 
     layout
     {
@@ -14,27 +13,21 @@ page 50108 "No Docentes"
             repeater(GroupName)
             {
                 ShowCaption = false;
-                field("Id No Docente"; Rec."Id No Docente")
+                field("Id Horario"; Rec."Id Horario")
                 {
+                    Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
                 }
                 field(Nombre; Rec.Nombre)
                 {
+                    Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
                 }
-                field(Telefono; Rec.Telefono)
+                field("Id Curso"; Rec."Id Curso")
                 {
+                    Caption = 'No. Course', comment = 'ESP="Nº Curso"';
                     ApplicationArea = All;
                 }
-                field(Puesto; Rec.Puesto)
-                {
-                    ApplicationArea = All;
-                }
-                field(Salario; Rec.Salario)
-                {
-                    ApplicationArea = All;
-                }
-
             }
         }
     }

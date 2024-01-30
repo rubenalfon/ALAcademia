@@ -1,11 +1,12 @@
-page 50108 "No Docentes"
+page 50105 "Cursos"
 {
-    Caption = 'No Docentes';
+    Caption = 'Cursos';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = "No Docente";
-    CardPageID = "Carta No Docente";
+    Editable = false;
+    SourceTable = Curso;
+    CardPageId = "Carta Curso";
 
     layout
     {
@@ -14,7 +15,7 @@ page 50108 "No Docentes"
             repeater(GroupName)
             {
                 ShowCaption = false;
-                field("Id No Docente"; Rec."Id No Docente")
+                field("Id Curso"; Rec."Id Curso")
                 {
                     ApplicationArea = All;
                 }
@@ -22,19 +23,27 @@ page 50108 "No Docentes"
                 {
                     ApplicationArea = All;
                 }
-                field(Telefono; Rec.Telefono)
+                field(Descripcion; Rec.Descripcion)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Descripción';
+                }
+                field("Horas Totales"; Rec."Horas Totales")
                 {
                     ApplicationArea = All;
                 }
-                field(Puesto; Rec.Puesto)
+                field("Tarifa Laboratorio"; Rec."Tarifa Laboratorio")
                 {
                     ApplicationArea = All;
                 }
-                field(Salario; Rec.Salario)
+                field(Profesor; Rec."Id Profesor")
                 {
                     ApplicationArea = All;
                 }
-
+                field("Id Dept. Profesor"; Rec."Id Dept. Profesor")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }
