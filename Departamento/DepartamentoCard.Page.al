@@ -77,7 +77,16 @@ page 50114 "Ficha Departamento"
 
         area(Creation)
         {
-
+            action(NuevoCurso)
+            {
+                Caption = 'New Course', comment = 'ESP="Nuevo Curso"';
+                ApplicationArea = All;
+                RunObject = page "Ficha Curso";
+                RunPageMode = Create;
+                Promoted = true;
+                PromotedCategory = Process;
+                Image = Add;
+            }
         }
     }
 }
