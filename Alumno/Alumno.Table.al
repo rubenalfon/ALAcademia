@@ -2,6 +2,7 @@ table 50100 Alumno
 {
     Caption = 'Alumno';
     DrillDownPageId = Alumnos;
+    LookupPageId = Alumnos;
 
     fields
     {
