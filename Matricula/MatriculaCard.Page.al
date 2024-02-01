@@ -1,4 +1,4 @@
-page 50113 "Carta Matricula"
+page 50113 "Ficha Matricula"
 {
     Caption = 'Tuition Card', comment = 'ESP="Ficha Matrícula"';
     PageType = Card;

@@ -85,13 +85,13 @@ page 50101 "Ficha Alumno"
     }
     actions
     {
-        area(Processing)
+        area(Creation)
         {
             action(NuevaMatricula)
             {
                 Caption = 'New Tuition', comment = 'ESP="Nueva Matrícula"';
                 ApplicationArea = All;
-                RunObject = page "Ficha Alumno";
+                RunObject = page "Ficha Matricula";
                 RunPageMode = Create;
                 Promoted = true;
                 PromotedCategory = Process;

@@ -74,5 +74,10 @@ page 50114 "Ficha Departamento"
                 RunPageLink = "Id Profesor" = field("Profesor Jefe");
             }
         }
+
+        area(Creation)
+        {
+
+        }
     }
 }

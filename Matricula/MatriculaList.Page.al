@@ -6,7 +6,7 @@ page 50102 "Matriculas"
     UsageCategory = Lists;
     Editable = false;
     SourceTable = Matricula;
-    CardPageId = "Carta Matricula";
+    CardPageId = "Ficha Matricula";
 
     layout
     {
