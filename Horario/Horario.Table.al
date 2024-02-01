@@ -1,6 +1,7 @@
 table 50103 Horario
 {
     DrillDownPageId = Horarios;
+    LookupPageId = Horarios;
 
     fields
     {

@@ -2,7 +2,7 @@ table 50104 Curso
 {
     Caption = 'Curso';
     DrillDownPageId = Cursos;
-    LookupPageId = Cursos;
+    LookupPageId = "Cursos";
 
     fields
     {

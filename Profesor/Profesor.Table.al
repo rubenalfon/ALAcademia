@@ -2,6 +2,7 @@ table 50107 "Profesor"
 {
     Caption = 'Profesor';
     DrillDownPageId = Profesores;
+    LookupPageId = "Profesores";
     DataCaptionFields = "Id Profesor", Nombre;
 
     fields

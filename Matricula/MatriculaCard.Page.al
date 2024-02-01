@@ -4,6 +4,7 @@ page 50113 "Carta Matricula"
     PageType = Card;
     UsageCategory = None;
     SourceTable = Matricula;
+    RefreshOnActivate = true;
 
     layout
     {
@@ -47,16 +48,15 @@ page 50113 "Carta Matricula"
 
     actions
     {
-        area(Processing)
+        area(Navigation)
         {
-            action(ActionName)
+            action(InformacionCurso)
             {
+                Caption = 'Course Info.', comment = 'ESP="Info. Curso"';
                 ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
+                RunObject = page "Carta Curso";
+                Image = Navigate;
+                RunPageLink = "Id Curso" = field("Curso Referencia");
             }
         }
     }
