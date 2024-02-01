@@ -3,6 +3,7 @@ page 50116 "Subpagina Cursos Dept."
     Caption = 'Offered Courses', comment = 'ESP="Cursos Ofertados"';
     PageType = ListPart;
     SourceTable = Curso;
+    Editable = false;
 
     layout
     {

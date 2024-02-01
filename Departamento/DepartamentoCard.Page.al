@@ -29,7 +29,6 @@ page 50114 "Ficha Departamento"
             part("Subpagina Cursos Dept."; "Subpagina Cursos Dept.")
             {
                 SubPageLink = "Id Dept. Profesor" = field("Id Departamento");
-                Editable = false;
             }
             group(Communication)
             {
