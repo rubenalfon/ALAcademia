@@ -5,7 +5,6 @@ page 50101 "Ficha Alumno"
     UsageCategory = None;
     SourceTable = Alumno;
     RefreshOnActivate = true;
-    PromotedActionCategories = 'Inicio, Acciones, Informes, Navegar';
 
     layout
     {
@@ -95,7 +94,7 @@ page 50101 "Ficha Alumno"
                 RunObject = page "Ficha Alumno";
                 RunPageMode = Create;
                 Promoted = true;
-                PromotedCategory = Category4;
+                PromotedCategory = Process;
                 Image = AddContacts;
             }
 
