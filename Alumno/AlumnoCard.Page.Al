@@ -1,6 +1,6 @@
 page 50101 "Ficha Alumno"
 {
-    Caption = 'Student card', comment = 'ESP="Ficha alumno"';
+    Caption = 'Student Card', comment = 'ESP="Ficha alumno"';
     PageType = Card;
     UsageCategory = None;
     SourceTable = Alumno;
@@ -38,30 +38,36 @@ page 50101 "Ficha Alumno"
             }
             group(DireccionContacto)
             {
-                Caption = 'Address & contact', comment = 'ESP="Dirección y contacto"';
+                Caption = 'Address & Contact', comment = 'ESP="Dirección y Contacto"';
                 group(DetalleDireccion)
                 {
                     Caption = 'Address', comment = 'ESP="Dirección"';
+
                     field(Direccion; Rec.Direccion)
                     {
+                        Caption = 'Address', comment = 'ESP="Dirección"';
                         ApplicationArea = All;
                     }
                     field("Cod. Pais"; Rec."Cod. Pais")
                     {
+                        Caption = 'Country Code', comment = 'ESP="Código País"';
                         ApplicationArea = All;
                     }
                     field(Poblacion; Rec.Poblacion)
                     {
+                        Caption = 'City', comment = 'ESP="Población"';
                         ApplicationArea = All;
                     }
                     field(Region; Rec.Region)
                     {
+                        Caption = 'Region', comment = 'ESP="Región"';
                         ApplicationArea = All;
                     }
                     field("Codigo postal"; Rec."Codigo postal")
                     {
-                        ApplicationArea = All;
+                        Caption = 'Postal Code', comment = 'ESP="Código Postal"';
                         Importance = Promoted;
+                        ApplicationArea = All;
                     }
                 }
                 group(DetalleContacto)
@@ -69,9 +75,9 @@ page 50101 "Ficha Alumno"
                     Caption = 'Contact', comment = 'ESP="Contacto"';
                     field(Telefono; Rec.Telefono)
                     {
-                        Caption = 'Phone number', comment = 'ESP="Nº teléfono"';
-                        ApplicationArea = All;
+                        Caption = 'Phone No.', comment = 'ESP="Nº Teléfono"';
                         Importance = Promoted;
+                        ApplicationArea = All;
                     }
                 }
             }

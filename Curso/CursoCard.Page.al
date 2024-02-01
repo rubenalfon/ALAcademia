@@ -1,6 +1,6 @@
 page 50111 "Ficha Curso"
 {
-    Caption = 'Course card', comment = 'ESP="Ficha curso"';
+    Caption = 'Course Card', comment = 'ESP="Ficha Curso"';
     PageType = Card;
     UsageCategory = None;
     SourceTable = Curso;

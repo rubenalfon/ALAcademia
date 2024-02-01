@@ -1,5 +1,6 @@
 page 50103 "Lineas Horario"
 {
+    Caption = 'Schedule Lines', comment = 'ESP="Líneas Horario"';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
@@ -14,30 +15,36 @@ page 50103 "Lineas Horario"
                 ShowCaption = false;
                 field("Id Linea Horario"; Rec."Id Linea Horario")
                 {
-                    Caption = 'Línea Horario';
+                    Caption = 'Line', comment = 'ESP="Línea"';
                     ApplicationArea = All;
                 }
                 field("Id Horario"; Rec."Id Horario")
                 {
+                    Caption = 'Schedule No.', comment = 'ESP="Nº Horario"';
                     ApplicationArea = All;
                     DrillDownPageId = Horarios;
                 }
                 field("Id Curso Horario"; Rec."Id Curso Horario")
                 {
-                    Caption = 'Curso';
+                    Caption = 'Course No.', comment = 'ESP="Nº Curso"';
                     ApplicationArea = All;
                     DrillDownPageId = Cursos;
                 }
-                field("Dia"; Rec."Dia") { ApplicationArea = All; }
+                field("Dia"; Rec."Dia")
+                {
+                    Caption = 'Day', comment = 'ESP="Día"';
+                    ApplicationArea = All;
+                }
                 field("Hora Inicio"; Rec."Hora Inicio")
                 {
+                    Caption = 'Start Hour', comment = 'ESP="Hora Inicio"';
                     ApplicationArea = All;
                 }
                 field("Hora Fin"; Rec."Hora Fin")
                 {
+                    Caption = 'Fin. Hour', comment = 'ESP="Hora Fin."';
                     ApplicationArea = All;
                 }
-
             }
         }
     }
