@@ -1,4 +1,4 @@
-page 50112 "FactBox Profesor"
+page 50115 "FactBox Profesor"
 {
     Caption = 'Details', comment = 'ESP="Detalles"';
     PageType = CardPart;

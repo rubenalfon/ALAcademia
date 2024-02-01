@@ -1,10 +1,9 @@
-page 50111 "Carta Curso"
+page 50111 "Ficha Curso"
 {
+    Caption = 'Course Card', comment = 'ESP="Ficha Curso"';
     PageType = Card;
-    ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = None;
     SourceTable = Curso;
-    RefreshOnActivate = true;
 
     layout
     {
@@ -12,43 +11,63 @@ page 50111 "Carta Curso"
         {
             group(General)
             {
-                Caption = 'General';
+                Caption = 'General', comment = 'ESP="General"';
                 field("Id Curso"; Rec."Id Curso")
                 {
-                    Caption = 'Id Curso';
+                    Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
                 }
                 field(Nombre; Rec.Nombre)
                 {
-                    Caption = 'Nombre';
+                    Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
+                    Importance = Promoted;
                 }
                 field(Descripcion; Rec.Descripcion)
                 {
-                    Caption = 'Descripción';
+                    Caption = 'Descripion', comment = 'ESP="Descripción"';
                     ApplicationArea = All;
                 }
                 field("Horas Totales"; Rec."Horas Totales")
                 {
-                    Caption = 'Horas Totales';
-                    ApplicationArea = All;
-                }
-                field("Id Profesor"; Rec."Id Profesor")
-                {
-                    Caption = 'Profesor';
-                    ApplicationArea = All;
-                }
-                field("Id Dept. Profesor"; Rec."Id Dept. Profesor")
-                {
-                    Caption = 'Departamento';
+                    Caption = 'Total hours', comment = 'ESP="Horas totales"';
                     ApplicationArea = All;
                 }
                 field("Tarifa Laboratorio"; Rec."Tarifa Laboratorio")
                 {
-                    Caption = 'Tarifa Laboratorio';
+                    Caption = 'Lab fee', comment = 'ESP="Tarifa laboratorio"';
+                    ApplicationArea = All;
+                    Importance = Additional;
+                }
+            }
+            group(Profesor)
+            {
+                Caption = 'Teacher', comment = 'ESP="Profesor"';
+                field("Id Profesor"; Rec."Id Profesor")
+                {
+                    Caption = 'Teacher No', comment = 'ESP="Profesor"';
+                    ApplicationArea = All;
+                    Importance = Promoted;
+                }
+                field("Id Dept. Profesor"; Rec."Id Dept. Profesor")
+                {
+                    Caption = 'Department', comment = 'ESP="Departamento"';
                     ApplicationArea = All;
                 }
             }
+            // part(Horario; "horario")
+            // {
+            //     ApplicationArea = All;
+            // }
         }
+        area(FactBoxes)
+        {
+            part("Curso Card Factbox"; "Curso Card Factbox")
+            {
+                ApplicationArea = All;
+                SubPageLink = "Id Curso" = field("Id Curso");
+            }
+        }
+
     }
 }

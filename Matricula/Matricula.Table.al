@@ -2,6 +2,7 @@ table 50101 "Matricula"
 {
     Caption = 'Matrícula';
     DrillDownPageID = Matriculas;
+    LookupPageId = "Matriculas";
 
     fields
     {

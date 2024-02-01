@@ -4,7 +4,9 @@ page 50107 Departamentos
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
+    Editable = false;
     SourceTable = Departamento;
+    CardPageId = "Ficha Departamento";
 
     layout
     {

@@ -4,8 +4,9 @@ page 50108 "No Docentes"
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;
+    Editable = false;
     SourceTable = "No Docente";
-    CardPageID = "Carta No Docente";
+    CardPageID = "Ficha No Docente";
 
     layout
     {
