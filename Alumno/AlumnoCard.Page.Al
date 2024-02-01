@@ -86,7 +86,7 @@ page 50101 "Ficha Alumno"
     }
     actions
     {
-        area(Navigation)
+        area(Processing)
         {
             action(NuevaMatricula)
             {
@@ -100,7 +100,7 @@ page 50101 "Ficha Alumno"
             }
 
         }
-        area(Processing)
+        area(Navigation)
         {
             action(Matriculas)
             {
