@@ -83,14 +83,14 @@ page 50101 "Ficha Alumno"
         {
             action(NuevaMatricula)
             {
-                Caption = 'New tuition', comment = 'ESP="Nueva matrícula"';
+                Caption = 'New Tuition', comment = 'ESP="Nueva Matrícula"';
                 ApplicationArea = All;
             }
 
         }
         area(Processing)
         {
-            action(Mariculas)
+            action(Matriculas)
             {
                 Caption = 'Tuitions', comment = 'ESP="Matrículas"';
                 ApplicationArea = All;
