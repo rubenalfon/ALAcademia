@@ -1,10 +1,9 @@
-page 50101 Alumno
+page 50101 "Ficha Alumno"
 {
     Caption = 'Carta Alumno';
     PageType = Card;
     SourceTable = Alumno;
     RefreshOnActivate = true;
-
 
     layout
     {

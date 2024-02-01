@@ -2,6 +2,7 @@ table 50105 Departamento
 {
     DrillDownPageId = Departamentos;
     LookupPageId = Departamentos;
+    DataCaptionFields = "Id Departamento", Nombre;
 
     fields
     {

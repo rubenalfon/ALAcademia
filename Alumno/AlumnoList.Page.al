@@ -6,7 +6,7 @@ page 50100 "Alumnos"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Alumno;
-    CardPageId = Alumno; // De lista a card
+    CardPageId = "Ficha Alumno"; // De lista a card
 
     layout
     {

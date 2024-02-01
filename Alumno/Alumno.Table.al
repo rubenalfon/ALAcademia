@@ -3,6 +3,7 @@ table 50100 Alumno
     Caption = 'Alumno';
     DrillDownPageId = Alumnos;
     LookupPageId = Alumnos;
+    DataCaptionFields = "Id Alumno", Nombre;
 
     fields
     {

@@ -6,7 +6,7 @@ page 50109 Profesores
     UsageCategory = Lists;
     Editable = false;
     SourceTable = Profesor;
-    CardPageID = "Carta Profesor";
+    CardPageID = "Ficha Profesor";
 
     layout
     {

@@ -1,4 +1,4 @@
-page 50111 "Carta Curso"
+page 50111 "Ficha Curso"
 {
     PageType = Card;
     ApplicationArea = All;

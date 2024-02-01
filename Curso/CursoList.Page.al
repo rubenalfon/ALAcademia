@@ -6,7 +6,7 @@ page 50105 "Cursos"
     UsageCategory = Lists;
     Editable = false;
     SourceTable = Curso;
-    CardPageId = "Carta Curso";
+    CardPageId = "Ficha Curso";
 
     layout
     {

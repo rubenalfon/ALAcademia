@@ -54,24 +54,24 @@ page 50113 "Carta Matricula"
             {
                 Caption = 'Course Info.', comment = 'ESP="Info. Curso"';
                 ApplicationArea = All;
-                RunObject = page "Carta Curso";
-                Image = Navigate;
+                RunObject = page "Ficha Curso";
+                Image = OpportunitiesList;
                 RunPageLink = "Id Curso" = field("Curso Referencia");
             }
             action(EstudianteDatos)
             {
                 Caption = 'Student Data', comment = 'ESP="Datos Alumno"';
                 ApplicationArea = All;
-                RunObject = page Alumno;
-                Image = Navigate;
+                RunObject = page "Ficha Alumno";
+                Image = VendorContact;
                 RunPageLink = "Id Alumno" = field("Alumno Referencia");
             }
             action(EstudianteMatricula)
             {
-                Caption = 'Student Tuition', comment = 'ESP="Matrícula Alumno"';
+                Caption = 'Student Tuitions', comment = 'ESP="Matrículas Alumno"';
                 ApplicationArea = All;
                 RunObject = page Matriculas;
-                Image = Navigate;
+                Image = ContactPerson;
                 RunPageLink = "Alumno Referencia" = field("Alumno Referencia");
             }
         }
