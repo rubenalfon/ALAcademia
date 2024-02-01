@@ -1,6 +1,5 @@
 table 50104 Curso
 {
-    Caption = 'Curso';
     DrillDownPageId = Cursos;
     LookupPageId = "Cursos";
     DataCaptionFields = "Id Curso", Nombre;
@@ -9,44 +8,41 @@ table 50104 Curso
     {
         field(1; "Id Curso"; Code[10])
         {
-            Caption = 'Id Curso';
             NotBlank = true;
         }
-        field(2; "Nombre"; Text[100])
+        field(2; Nombre; Text[100])
         {
-            Caption = 'Nombre';
             NotBlank = true;
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'Descripción';
             NotBlank = true;
         }
         field(4; "Horas Totales"; Integer)
         {
-            Caption = 'Horas Totales';
             NotBlank = true;
         }
         field(5; "Tarifa Laboratorio"; Decimal)
         {
-            Caption = 'Tarifa Laboratorio';
         }
         field(6; "Id Profesor"; Code[10])
         {
-            Caption = 'Profesor';
             TableRelation = Profesor;
         }
         field(7; "Id Horario"; Code[10])
         {
-            Caption = 'Horario';
             TableRelation = Horario;
         }
         field(8; "Id Dept. Profesor"; Code[10])
         {
-            Caption = 'Departamento';
             FieldClass = FlowField;
             CalcFormula = LOOKUP(Profesor."Id Departamento"
             WHERE("Id Profesor" = FIELD("Id Profesor")));
+        }
+        field(9; "Num Alumnos"; Integer)
+        {
+            FieldClass = FlowField;
+            CalcFormula = count(Matricula WHERE("Curso Referencia" = FIELD("Id Curso")));
         }
     }
 
@@ -60,7 +56,10 @@ table 50104 Curso
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Id Curso", Nombre, Descripcion, "Horas Totales") { }
+        fieldgroup(DropDown; "Id Curso", Nombre, Descripcion, "Horas Totales")
+        {
+            Caption = 'Courses', comment = 'ESP="Cursos"';
+        }
     }
 
 }
