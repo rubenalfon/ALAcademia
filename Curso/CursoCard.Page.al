@@ -39,6 +39,11 @@ page 50111 "Ficha Curso"
                     ApplicationArea = All;
                     Importance = Additional;
                 }
+
+                field("Id Horario"; Rec."Id Horario")
+                {
+                    Caption = 'Schedule no.', comment = 'ESP="Nº horario"';
+                }
             }
             group(Profesor)
             {
@@ -55,7 +60,11 @@ page 50111 "Ficha Curso"
                     ApplicationArea = All;
                 }
             }
-            part("Horario Subform"; "Horario Subform")
+
+
+
+
+            part("Lineas Horario Subpage"; "Lineas Horario Subpage")
             {
                 ApplicationArea = All;
                 SubPageLink = "Id Horario" = field("Id Horario");
@@ -66,7 +75,7 @@ page 50111 "Ficha Curso"
             part("Curso Card Factbox"; "Curso Card Factbox")
             {
                 ApplicationArea = All;
-                SubPageLink = "Id Curso" = field("Id Curso");
+                SubPageLink = "Id Horario" = field("Id Horario");
             }
         }
 

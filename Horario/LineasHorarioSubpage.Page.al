@@ -1,6 +1,6 @@
-page 50116 "Horario Subform"
+page 50116 "Lineas Horario Subpage"
 {
-    Caption = 'Horario', comment = 'ESP="Horario"';
+    Caption = 'Schedule', comment = 'ESP="Horario"';
     PageType = ListPart;
     SourceTable = "Linea Horario";
 
@@ -21,12 +21,6 @@ page 50116 "Horario Subform"
                     Caption = 'Schedule No.', comment = 'ESP="Nº Horario"';
                     ApplicationArea = All;
                     DrillDownPageId = Horarios;
-                }
-                field("Id Curso Horario"; Rec."Id Curso Horario")
-                {
-                    Caption = 'Course No.', comment = 'ESP="Nº Curso"';
-                    ApplicationArea = All;
-                    DrillDownPageId = Cursos;
                 }
                 field("Dia"; Rec."Dia")
                 {

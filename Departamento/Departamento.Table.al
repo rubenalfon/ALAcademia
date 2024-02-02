@@ -41,7 +41,10 @@ table 50105 Departamento
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Id Departamento", Nombre, Despacho, "Profesor Jefe") { }
+        fieldgroup(DropDown; "Id Departamento", Nombre, Despacho, "Profesor Jefe")
+        {
+            Caption = 'Departments', comment = 'ESP="Departamentos"';
+        }
     }
 
 }

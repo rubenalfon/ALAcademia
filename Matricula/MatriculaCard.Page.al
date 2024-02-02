@@ -76,7 +76,4 @@ page 50113 "Ficha Matricula"
             }
         }
     }
-
-    var
-        myInt: Integer;
 }

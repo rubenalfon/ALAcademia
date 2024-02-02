@@ -12,12 +12,6 @@ table 50102 "Linea Horario"
         {
             TableRelation = Horario;
         }
-        field(3; "Id Curso Horario"; Code[10])
-        {
-            FieldClass = FlowField;
-            CalcFormula = LOOKUP(Horario."Id Curso"
-            WHERE("Id Horario" = FIELD("Id Horario")));
-        }
         field(4; "Dia"; Enum "Dias Semana")
         {
             NotBlank = true;
@@ -40,6 +34,14 @@ table 50102 "Linea Horario"
         key(pk; "Id Linea Horario")
         {
             Clustered = true;
+        }
+    }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Linea Horario", "Id Horario")
+        {
+            Caption = 'Schedule Lines', comment = 'ESP="Líneas Horario"';
         }
     }
 }

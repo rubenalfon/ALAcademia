@@ -1,6 +1,5 @@
 table 50101 "Matricula"
 {
-    Caption = 'Matrícula';
     DrillDownPageID = Matriculas;
     LookupPageId = "Matriculas";
 
@@ -33,6 +32,14 @@ table 50101 "Matricula"
         key(pk; "Id Matricula")
         {
             Clustered = true;
+        }
+    }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Matricula", "Curso Referencia", "Alumno Referencia")
+        {
+            Caption = 'Tuitions', comment = 'ESP="Matrículas"';
         }
     }
 

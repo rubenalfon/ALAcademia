@@ -24,12 +24,6 @@ page 50103 "Lineas Horario"
                     ApplicationArea = All;
                     DrillDownPageId = Horarios;
                 }
-                field("Id Curso Horario"; Rec."Id Curso Horario")
-                {
-                    Caption = 'Course No.', comment = 'ESP="Nº Curso"';
-                    ApplicationArea = All;
-                    DrillDownPageId = Cursos;
-                }
                 field("Dia"; Rec."Dia")
                 {
                     Caption = 'Day', comment = 'ESP="Día"';

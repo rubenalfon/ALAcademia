@@ -27,4 +27,12 @@ table 50103 Horario
             Clustered = true;
         }
     }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown; "Id Horario", Nombre)
+        {
+            Caption = 'Schedules', comment = 'ESP="Horarios"';
+        }
+    }
 }

@@ -14,9 +14,8 @@ table 50100 Alumno
         {
             NotBlank = true;
         }
-        field(3; Sexo; Option)
+        field(3; Sexo; Enum Sexo)
         {
-            OptionMembers = Masculino,Femenino,Otro,"S/N";
             NotBlank = true;
         }
         field(4; Telefono; BigInteger)
@@ -67,7 +66,7 @@ table 50100 Alumno
     {
         fieldgroup(DropDown; "Id Alumno", Nombre, Sexo, Telefono, "Codigo postal")
         {
-            Caption = 'Student', comment = 'ESP="Alumno"';
+            Caption = 'Students', comment = 'ESP="Alumnos"';
         }
     }
 }
