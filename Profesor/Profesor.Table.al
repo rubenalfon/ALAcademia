@@ -95,7 +95,10 @@ table 50107 "Profesor"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Id Profesor", Nombre, Poblacion, "Codigo postal") { Caption = 'Teacher', comment = 'ESP="Profesor"'; }
+        fieldgroup(DropDown; "Id Profesor", Nombre, Poblacion, "Codigo postal")
+        {
+            Caption = 'Teacher', comment = 'ESP="Profesor"';
+        }
     }
 
 }
