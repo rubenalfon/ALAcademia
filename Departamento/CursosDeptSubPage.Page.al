@@ -45,6 +45,14 @@ page 50117 "Subpagina Cursos Dept."
     {
         area(Processing)
         {
+            action(Matriculas)
+            {
+                Caption = 'Tuitions', comment = 'ESP="Matrículas"';
+                ApplicationArea = All;
+                RunObject = page Matriculas;
+                RunPageMode = Create;
+                Image = List;
+            }
         }
     }
 }
