@@ -1,4 +1,4 @@
-page 50116 "Subpagina Cursos Dept."
+page 50117 "Subpagina Cursos Dept."
 {
     Caption = 'Offered Courses', comment = 'ESP="Cursos Ofertados"';
     PageType = ListPart;
