@@ -24,6 +24,7 @@ table 50106 "No Docente"
         }
         field(5; Telefono; BigInteger)
         {
+            NotBlank = true;
         }
         field(6; Direccion; Text[100])
         {

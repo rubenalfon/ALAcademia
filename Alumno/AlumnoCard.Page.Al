@@ -17,23 +17,27 @@ page 50101 "Ficha Alumno"
                 {
                     Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field(Nombre; Rec.Nombre)
                 {
                     Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
                     Importance = Promoted;
+                    ShowMandatory = true;
                 }
                 field(Sexo; Rec.Sexo)
                 {
                     Caption = 'Sex', comment = 'ESP="Sexo"';
                     ApplicationArea = All;
                     Importance = Additional;
+                    ShowMandatory = true;
                 }
                 field("Fecha Nacimiento"; Rec."Fecha Nacimiento")
                 {
-                    Caption = 'Birth date', comment = 'ESP="Fecha de nacimiento"';
+                    Caption = 'Birth Date', comment = 'ESP="Fecha Nacimiento"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
             }
             group(DireccionContacto)
@@ -78,6 +82,7 @@ page 50101 "Ficha Alumno"
                         Caption = 'Phone No.', comment = 'ESP="Nº Teléfono"';
                         Importance = Promoted;
                         ApplicationArea = All;
+                        ShowMandatory = true;
                     }
                 }
             }

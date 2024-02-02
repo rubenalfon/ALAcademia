@@ -18,6 +18,7 @@ page 50113 "Ficha Matricula"
                 {
                     Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Alumno Referencia"; Rec."Alumno Referencia")
                 {
@@ -36,11 +37,13 @@ page 50113 "Ficha Matricula"
                 {
                     Caption = 'Tuition Date', comment = 'ESP="Fecha de Matrícula"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Hora Matricula"; Rec."Hora Matricula")
                 {
                     Caption = 'Tuition Hour', comment = 'ESP="Hora Matrícula"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
 
             }

@@ -39,7 +39,7 @@ table 50102 "Linea Horario"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Id Linea Horario", "Id Horario")
+        fieldgroup(DropDown; "Id Linea Horario", "Id Horario", Dia, "Hora Inicio", "Hora Fin")
         {
             Caption = 'Schedule Lines', comment = 'ESP="Líneas Horario"';
         }

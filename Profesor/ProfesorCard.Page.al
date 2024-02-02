@@ -16,12 +16,14 @@ page 50110 "Ficha Profesor"
                 {
                     Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field(Nombre; Rec.Nombre)
                 {
                     Caption = 'Name', comment = 'ESP="Nombre"';
                     Importance = Promoted;
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
             }
 
@@ -67,6 +69,7 @@ page 50110 "Ficha Profesor"
                         Caption = 'Phone No.', comment = 'ESP="Nº Teléfono"';
                         Importance = Promoted;
                         ApplicationArea = All;
+                        ShowMandatory = true;
                     }
                 }
             }
@@ -83,11 +86,13 @@ page 50110 "Ficha Profesor"
                 {
                     Caption = 'Salary', comment = 'ESP="Salario"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Fecha Contratacion"; Rec."Fecha Contratacion")
                 {
                     Caption = 'Hire Date', comment = 'ESP="Fecha Contratación"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Num. Ayudantes"; Rec."Num. Ayudantes")
                 {

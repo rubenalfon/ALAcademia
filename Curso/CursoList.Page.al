@@ -32,22 +32,22 @@ page 50105 "Cursos"
                 }
                 field("Horas Totales"; Rec."Horas Totales")
                 {
-                    Caption = 'Total hours', comment = 'ESP="Horas totales"';
+                    Caption = 'Total Hours', comment = 'ESP="Horas Totales"';
                     ApplicationArea = All;
                 }
                 field("Tarifa Laboratorio"; Rec."Tarifa Laboratorio")
                 {
-                    Caption = 'lab fee', comment = 'ESP="Tarifa laboratorio"';
+                    Caption = 'Lab. Fee', comment = 'ESP="Tarifa Lab."';
                     ApplicationArea = All;
                 }
                 field(Profesor; Rec."Id Profesor")
                 {
-                    Caption = 'Teacher no.', comment = 'ESP="Nº profesor"';
+                    Caption = 'Teacher No.', comment = 'ESP="Nº profesor"';
                     ApplicationArea = All;
                 }
                 field("Id Dept. Profesor"; Rec."Id Dept. Profesor")
                 {
-                    Caption = 'Department no.', comment = 'ESP="Nº departamento"';
+                    Caption = 'Department No.', comment = 'ESP="Nº Departamento"';
                     ApplicationArea = All;
                 }
             }

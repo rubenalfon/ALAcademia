@@ -16,33 +16,37 @@ page 50111 "Ficha Curso"
                 {
                     Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field(Nombre; Rec.Nombre)
                 {
                     Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
                     Importance = Promoted;
+                    ShowMandatory = true;
                 }
                 field(Descripcion; Rec.Descripcion)
                 {
-                    Caption = 'Descripion', comment = 'ESP="Descripción"';
+                    Caption = 'Description', comment = 'ESP="Descripción"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Horas Totales"; Rec."Horas Totales")
                 {
-                    Caption = 'Total hours', comment = 'ESP="Horas totales"';
+                    Caption = 'Total Hours', comment = 'ESP="Horas Totales"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Tarifa Laboratorio"; Rec."Tarifa Laboratorio")
                 {
-                    Caption = 'Lab fee', comment = 'ESP="Tarifa laboratorio"';
+                    Caption = 'Lab Fee', comment = 'ESP="Tarifa laboratorio"';
                     ApplicationArea = All;
                     Importance = Additional;
                 }
 
                 field("Id Horario"; Rec."Id Horario")
                 {
-                    Caption = 'Schedule no.', comment = 'ESP="Nº horario"';
+                    Caption = 'Schedule No.', comment = 'ESP="Nº horario"';
                 }
             }
             group(Profesor)
@@ -56,14 +60,10 @@ page 50111 "Ficha Curso"
                 }
                 field("Id Dept. Profesor"; Rec."Id Dept. Profesor")
                 {
-                    Caption = 'Department', comment = 'ESP="Departamento"';
+                    Caption = 'Teacher Dept. No.', comment = 'ESP="Nº Dept. Profesor"';
                     ApplicationArea = All;
                 }
             }
-
-
-
-
             part("Lineas Horario Subpage"; "Lineas Horario Subpage")
             {
                 ApplicationArea = All;
@@ -76,6 +76,11 @@ page 50111 "Ficha Curso"
             {
                 ApplicationArea = All;
                 SubPageLink = "Id Horario" = field("Id Horario");
+            }
+            systempart(Notas; Notes)
+            {
+                Caption = 'Notes', comment = 'ESP="Notas"';
+                ApplicationArea = Notes;
             }
         }
 

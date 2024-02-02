@@ -28,9 +28,12 @@ table 50107 "Profesor"
             TableRelation = Departamento;
         }
         field(6; Telefono; BigInteger)
-        { }
+        {
+            NotBlank = true;
+        }
         field(7; Direccion; Text[100])
-        { }
+        {
+        }
         field(8; "Cod. Pais"; Code[10])
         {
             TableRelation = "Country/Region";
@@ -95,7 +98,7 @@ table 50107 "Profesor"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Id Profesor", Nombre, Poblacion, "Codigo postal")
+        fieldgroup(DropDown; "Id Profesor", Nombre, "Id Departamento", Telefono, "Codigo postal")
         {
             Caption = 'Teacher', comment = 'ESP="Profesor"';
         }

@@ -58,7 +58,6 @@ page 50106 "Ficha No Docente"
                         Caption = 'Postal Code', comment = 'ESP="Código Postal"';
                         Importance = Promoted;
                         ApplicationArea = All;
-                        ShowMandatory = true;
                     }
                 }
                 group(DetalleContacto)
@@ -82,11 +81,13 @@ page 50106 "Ficha No Docente"
                     Caption = 'Position', comment = 'ESP="Puesto"';
                     ApplicationArea = All;
                     Importance = Promoted;
+                    ShowMandatory = true;
                 }
                 field(Salario; Rec.Salario)
                 {
                     Caption = 'Salary', comment = 'ESP="Salario"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Id Profesor"; Rec."Id Profesor")
                 {

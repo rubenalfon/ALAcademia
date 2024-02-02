@@ -1,6 +1,6 @@
 page 50117 "Subpagina Cursos Dept."
 {
-    Caption = 'Courses', comment = 'ESP="Cursos"';
+    Caption = 'Dept. Courses', comment = 'ESP="Cursos Dept."';
     PageType = ListPart;
     SourceTable = Curso;
 
@@ -16,19 +16,16 @@ page 50117 "Subpagina Cursos Dept."
                     Caption = 'Course No.', comment = 'ESP="Nº Curso"';
                     ApplicationArea = All;
                 }
-
                 field(Nombre; Rec.Nombre)
                 {
                     Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
                 }
-
                 field(Descripcion; Rec.Descripcion)
                 {
                     Caption = 'Description', comment = 'ESP="Descripción"';
                     ApplicationArea = All;
                 }
-
                 field("Horas Totales"; Rec."Horas Totales")
                 {
                     Caption = 'Total Hours', comment = 'ESP="Horas Totales"';

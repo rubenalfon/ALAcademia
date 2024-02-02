@@ -24,6 +24,7 @@ page 50114 "Ficha Departamento"
                     Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
                     Importance = Promoted;
+                    ShowMandatory = true;
                 }
             }
             part("Subpagina Cursos Dept."; "Subpagina Cursos Dept.")
@@ -38,6 +39,7 @@ page 50114 "Ficha Departamento"
                     Caption = 'Office', comment = 'ESP="Despacho"';
                     ApplicationArea = All;
                     Importance = Promoted;
+                    ShowMandatory = true;
                 }
                 field("Profesor Jefe"; Rec."Profesor Jefe")
                 {

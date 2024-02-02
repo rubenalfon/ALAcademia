@@ -1,6 +1,6 @@
 page 50116 "Lineas Horario Subpage"
 {
-    Caption = 'Schedule', comment = 'ESP="Horario"';
+    Caption = 'Schedule Lines', comment = 'ESP="Líneas Horario"';
     PageType = ListPart;
     SourceTable = "Linea Horario";
 
@@ -15,6 +15,7 @@ page 50116 "Lineas Horario Subpage"
                 {
                     Caption = 'Line', comment = 'ESP="Línea"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Id Horario"; Rec."Id Horario")
                 {
@@ -26,16 +27,19 @@ page 50116 "Lineas Horario Subpage"
                 {
                     Caption = 'Day', comment = 'ESP="Día"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Hora Inicio"; Rec."Hora Inicio")
                 {
                     Caption = 'Start Hour', comment = 'ESP="Hora Inicio"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Hora Fin"; Rec."Hora Fin")
                 {
                     Caption = 'Fin. Hour', comment = 'ESP="Hora Fin."';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
             }
         }

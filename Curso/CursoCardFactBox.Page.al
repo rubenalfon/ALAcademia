@@ -1,6 +1,6 @@
 page 50112 "Curso Card Factbox"
 {
-    Caption = 'Course stadistics', comment = 'ESP="Estadisticas curso"';
+    Caption = 'Course Statistics', comment = 'ESP="Estadisticas Curso"';
     PageType = CardPart;
     SourceTable = Curso;
 
@@ -11,17 +11,17 @@ page 50112 "Curso Card Factbox"
         {
             field("Num Alumnos"; Rec."Num Alumnos")
             {
-                Caption = 'Student no.', comment = 'ESP="Nº alumnos"';
+                Caption = 'Student No.', comment = 'ESP="Nº Alumnos"';
                 ApplicationArea = All;
             }
             field("Horas Totales"; Rec."Horas Totales")
             {
-                Caption = 'Total hours', comment = 'ESP="Horas totales"';
+                Caption = 'Total Hours', comment = 'ESP="Horas Totales"';
                 ApplicationArea = All;
             }
             field("Tarifa Laboratorio"; Rec."Tarifa Laboratorio")
             {
-                Caption = 'Lab fee', comment = 'ESP="Tarifa laboratorio"';
+                Caption = 'Laboratory Fee', comment = 'ESP="Tarifa Laboratorio"';
                 ApplicationArea = All;
             }
         }

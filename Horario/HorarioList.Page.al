@@ -17,11 +17,13 @@ page 50104 Horarios
                 {
                     Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field(Nombre; Rec.Nombre)
                 {
                     Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field("Id Curso"; Rec."Id Curso")
                 {

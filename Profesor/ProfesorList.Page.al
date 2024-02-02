@@ -30,6 +30,11 @@ page 50109 Profesores
                     Caption = 'Phone No.', comment = 'ESP="Nº Teléfono"';
                     ApplicationArea = All;
                 }
+                field("Id Departamento"; Rec."Id Departamento")
+                {
+                    Caption = 'Dept. No.', comment = 'ESP="Nº Dept."';
+                    ApplicationArea = All;
+                }
                 field(Salario; Rec.Salario)
                 {
                     Caption = 'Salary', comment = 'ESP="Salario"';
