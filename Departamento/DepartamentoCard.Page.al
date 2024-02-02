@@ -70,9 +70,6 @@ page 50114 "Ficha Departamento"
             {
                 Caption = 'Head of Dept.', comment = 'ESP="Jefe de Dept."';
                 ApplicationArea = All;
-                //Promoted = true;
-                //PromotedCategory = Process;
-                //PromotedIsBig = true;
                 Image = AbsenceCategory;
                 RunObject = page "Ficha Profesor";
                 RunPageLink = "Id Profesor" = field("Profesor Jefe");

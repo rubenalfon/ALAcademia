@@ -5,6 +5,7 @@ page 50113 "Ficha Matricula"
     UsageCategory = None;
     SourceTable = Matricula;
     RefreshOnActivate = true;
+    PromotedActionCategories = 'Inicio, Acciones, Informes, Información, Estudiante';
 
     layout
     {
@@ -57,6 +58,8 @@ page 50113 "Ficha Matricula"
                 RunObject = page "Ficha Curso";
                 Image = Certificate;
                 RunPageLink = "Id Curso" = field("Curso Referencia");
+                Promoted = true;
+                PromotedCategory = Category4;
             }
 
             action(DatosEstudiante)
@@ -66,6 +69,8 @@ page 50113 "Ficha Matricula"
                 RunObject = page "Ficha Alumno";
                 Image = User;
                 RunPageLink = "Id Alumno" = field("Alumno Referencia");
+                Promoted = true;
+                PromotedCategory = Category5;
             }
 
             action(MatriculasEstudiante)
@@ -74,6 +79,8 @@ page 50113 "Ficha Matricula"
                 ApplicationArea = All;
                 RunObject = page Matriculas;
                 Image = SocialSecurityLines;
+                Promoted = true;
+                PromotedCategory = Category5;
             }
         }
     }

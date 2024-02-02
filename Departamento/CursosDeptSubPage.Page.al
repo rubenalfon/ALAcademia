@@ -1,9 +1,8 @@
 page 50117 "Subpagina Cursos Dept."
 {
-    Caption = 'Offered Courses', comment = 'ESP="Cursos Ofertados"';
+    Caption = 'Courses', comment = 'ESP="Cursos"';
     PageType = ListPart;
     SourceTable = Curso;
-    Editable = false;
 
     layout
     {
@@ -11,11 +10,11 @@ page 50117 "Subpagina Cursos Dept."
         {
             repeater(Group)
             {
+                ShowCaption = false;
                 field("Id Curso"; Rec."Id Curso")
                 {
                     Caption = 'Course No.', comment = 'ESP="Nº Curso"';
                     ApplicationArea = All;
-                    Width = 0;
                 }
 
                 field(Nombre; Rec.Nombre)
@@ -28,14 +27,12 @@ page 50117 "Subpagina Cursos Dept."
                 {
                     Caption = 'Description', comment = 'ESP="Descripción"';
                     ApplicationArea = All;
-                    Width = 0;
                 }
 
                 field("Horas Totales"; Rec."Horas Totales")
                 {
                     Caption = 'Total Hours', comment = 'ESP="Horas Totales"';
                     ApplicationArea = All;
-                    Width = 0;
                 }
             }
         }
@@ -45,14 +42,29 @@ page 50117 "Subpagina Cursos Dept."
     {
         area(Processing)
         {
-            action(Matriculas)
+            group(Curso)
             {
-                Caption = 'Tuitions', comment = 'ESP="Matrículas"';
-                ApplicationArea = All;
-                RunObject = page Matriculas;
-                RunPageMode = Create;
-                Image = List;
+                Caption = 'Course', comment = 'ESP="Curso"';
+                Image = Line;
+                action(Matriculas)
+                {
+                    Caption = 'Tuitions', comment = 'ESP="Matrículas"';
+                    ApplicationArea = All;
+                    RunObject = page Matriculas;
+                    RunPageMode = Create;
+                    Image = ProfileCalendar;
+                }
+
+                action(Datos)
+                {
+                    Caption = 'Data', comment = 'ESP="Datos"';
+                    ApplicationArea = All;
+                    RunObject = page "Ficha Curso";
+                    RunPageLink = "Id Curso" = field("Id Curso");
+                    Image = LineDescription;
+                }
             }
+
         }
     }
 }
