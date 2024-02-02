@@ -1,10 +1,10 @@
-page 50101 Alumno
+page 50101 "Ficha Alumno"
 {
-    Caption = 'Carta Alumno';
+    Caption = 'Student Card', comment = 'ESP="Ficha alumno"';
     PageType = Card;
+    UsageCategory = None;
     SourceTable = Alumno;
     RefreshOnActivate = true;
-
 
     layout
     {
@@ -12,51 +12,102 @@ page 50101 Alumno
         {
             group(General)
             {
-                Caption = 'General';
+                Caption = 'General', comment = 'ESP="General"';
                 field("Id Alumno"; Rec."Id Alumno")
                 {
+                    Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
                 }
                 field(Nombre; Rec.Nombre)
                 {
+                    Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
+                    Importance = Promoted;
                 }
                 field(Sexo; Rec.Sexo)
                 {
+                    Caption = 'Sex', comment = 'ESP="Sexo"';
                     ApplicationArea = All;
-                }
-                field(Telefono; Rec.Telefono)
-                {
-                    ApplicationArea = All;
+                    Importance = Additional;
                 }
                 field("Fecha Nacimiento"; Rec."Fecha Nacimiento")
                 {
+                    Caption = 'Birth date', comment = 'ESP="Fecha de nacimiento"';
                     ApplicationArea = All;
                 }
             }
-            group(GroupDireccion)
+            group(DireccionContacto)
             {
-                Caption = 'Dirección';
-                field(Direccion; Rec.Direccion)
+                Caption = 'Address & Contact', comment = 'ESP="Dirección y Contacto"';
+                group(DetalleDireccion)
                 {
-                    ApplicationArea = All;
+                    Caption = 'Address', comment = 'ESP="Dirección"';
+
+                    field(Direccion; Rec.Direccion)
+                    {
+                        Caption = 'Address', comment = 'ESP="Dirección"';
+                        ApplicationArea = All;
+                    }
+                    field("Cod. Pais"; Rec."Cod. Pais")
+                    {
+                        Caption = 'Country Code', comment = 'ESP="Código País"';
+                        ApplicationArea = All;
+                    }
+                    field(Poblacion; Rec.Poblacion)
+                    {
+                        Caption = 'City', comment = 'ESP="Población"';
+                        ApplicationArea = All;
+                    }
+                    field(Region; Rec.Region)
+                    {
+                        Caption = 'Region', comment = 'ESP="Región"';
+                        ApplicationArea = All;
+                    }
+                    field("Codigo postal"; Rec."Codigo postal")
+                    {
+                        Caption = 'Postal Code', comment = 'ESP="Código Postal"';
+                        Importance = Promoted;
+                        ApplicationArea = All;
+                    }
                 }
-                field("Cod. Pais"; Rec."Cod. Pais")
+                group(DetalleContacto)
                 {
-                    ApplicationArea = All;
+                    Caption = 'Contact', comment = 'ESP="Contacto"';
+                    field(Telefono; Rec.Telefono)
+                    {
+                        Caption = 'Phone No.', comment = 'ESP="Nº Teléfono"';
+                        Importance = Promoted;
+                        ApplicationArea = All;
+                    }
                 }
-                field(Poblacion; Rec.Poblacion)
-                {
-                    ApplicationArea = All;
-                }
-                field(Region; Rec.Region)
-                {
-                    ApplicationArea = All;
-                }
-                field("Codigo postal"; Rec."Codigo postal")
-                {
-                    ApplicationArea = All;
-                }
+            }
+        }
+    }
+    actions
+    {
+        area(Creation)
+        {
+            action(NuevaMatricula)
+            {
+                Caption = 'New Tuition', comment = 'ESP="Nueva Matrícula"';
+                ApplicationArea = All;
+                RunObject = page "Ficha Matricula";
+                RunPageMode = Create;
+                Promoted = true;
+                PromotedCategory = Process;
+                Image = AddContacts;
+            }
+
+        }
+        area(Navigation)
+        {
+            action(Matriculas)
+            {
+                Caption = 'Tuitions', comment = 'ESP="Matrículas"';
+                ApplicationArea = All;
+                RunObject = page Matriculas;
+                RunPageLink = "Alumno Referencia" = field("Id Alumno");
+                Image = ShowList;
             }
         }
     }

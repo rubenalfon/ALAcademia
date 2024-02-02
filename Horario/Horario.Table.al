@@ -2,6 +2,7 @@ table 50103 Horario
 {
     DrillDownPageId = Horarios;
     LookupPageId = Horarios;
+    DataCaptionFields = "Id Horario", Nombre;
 
     fields
     {

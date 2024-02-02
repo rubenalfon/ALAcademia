@@ -1,4 +1,4 @@
-page 50112 "FactBox Profesor"
+page 50115 "FactBox Profesor"
 {
     Caption = 'Details', comment = 'ESP="Detalles"';
     PageType = CardPart;
@@ -12,7 +12,6 @@ page 50112 "FactBox Profesor"
             {
                 Caption = 'No. of Assistants', comment = 'ESP="Nº de Ayudantes"';
                 ApplicationArea = All;
-
             }
             field("Num. Cursos"; Rec."Num. Cursos")
             {

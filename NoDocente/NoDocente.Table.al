@@ -3,6 +3,7 @@ table 50106 "No Docente"
     Caption = 'No Docente';
     DrillDownPageId = "No Docentes";
     LookupPageId = "No Docentes";
+    DataCaptionFields = "Id No Docente", Nombre;
 
     fields
     {

@@ -1,4 +1,4 @@
-page 50110 "Carta Profesor"
+page 50110 "Ficha Profesor"
 {
     Caption = 'Teacher Card', comment = 'ESP="Ficha Profesor"';
     PageType = Card;
@@ -72,6 +72,7 @@ page 50110 "Carta Profesor"
             }
             group(Laboral)
             {
+                Caption = 'Employment', comment = 'ESP="Laboral"';
                 field("Id Departamento"; Rec."Id Departamento")
                 {
                     Caption = 'Department No.', comment = 'ESP="Nº Departamento"';
@@ -109,6 +110,11 @@ page 50110 "Carta Profesor"
             {
                 ApplicationArea = All;
                 SubPageLink = "Id Profesor" = field("Id Profesor");
+            }
+            systempart(Notas; Notes)
+            {
+                Caption = 'Notes', comment = 'ESP="Notas"';
+                ApplicationArea = Notes;
             }
         }
     }

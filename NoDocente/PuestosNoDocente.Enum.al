@@ -5,22 +5,22 @@ enum 50100 "Puestos No Docente"
     value(0; " ") { Caption = ''; }
     value(1; "Ayudante")
     {
-        Caption = 'Ayudante';
+        Caption = 'Helper', comment = 'ESP="Ayudante"';
     }
     value(2; "Becario")
     {
-        Caption = 'Becario/a';
+        Caption = 'Intern', comment = 'ESP="Becario/a"';
     }
     value(3; "Conserje")
     {
-        Caption = 'Conserje';
+        Caption = 'Janitor', comment = 'ESP="Conserje"';
     }
     value(4; "Secretario")
     {
-        Caption = 'Secretario/a';
+        Caption = 'Secretary', comment = 'ESP="Secretario/a"';
     }
     value(5; "Limpiador")
     {
-        Caption = 'Limpiador/a';
+        Caption = 'Cleaner', comment = 'ESP="Limpiador/a"';
     }
 }

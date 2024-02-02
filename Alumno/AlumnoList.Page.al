@@ -1,12 +1,14 @@
 page 50100 "Alumnos"
 {
-    Caption = 'Alumnos';
+    Caption = 'Students', comment = 'ESP="Alumnos"';
     PageType = List;
-    Editable = false; // Para obligar a meter datos en card
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Alumno;
-    CardPageId = Alumno; // De lista a card
+    Editable = false;
+    DeleteAllowed = false;
+    InsertAllowed = false;
+    CardPageId = "Ficha Alumno";
 
     layout
     {
@@ -17,18 +19,22 @@ page 50100 "Alumnos"
                 ShowCaption = false;
                 field("Id Alumno"; Rec."Id Alumno")
                 {
+                    Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
                 }
                 field(Nombre; Rec.Nombre)
                 {
+                    Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
                 }
                 field(Sexo; Rec.Sexo)
                 {
+                    Caption = 'Sex', comment = 'ESP="Sexo"';
                     ApplicationArea = All;
                 }
                 field(Telefono; Rec.Telefono)
                 {
+                    Caption = 'Phone No.', comment = 'ESP="Nº Teléfono"';
                     ApplicationArea = All;
                 }
             }

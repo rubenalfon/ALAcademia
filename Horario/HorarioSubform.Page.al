@@ -1,9 +1,7 @@
-page 50103 "Lineas Horario"
+page 50116 "Horario Subform"
 {
-    Caption = 'Schedule Lines', comment = 'ESP="Líneas Horario"';
-    PageType = List;
-    ApplicationArea = All;
-    UsageCategory = Lists;
+    Caption = 'Horario', comment = 'ESP="Horario"';
+    PageType = ListPart;
     SourceTable = "Linea Horario";
 
     layout
