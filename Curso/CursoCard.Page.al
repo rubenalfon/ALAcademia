@@ -55,10 +55,11 @@ page 50111 "Ficha Curso"
                     ApplicationArea = All;
                 }
             }
-            // part(Horario; "horario")
-            // {
-            //     ApplicationArea = All;
-            // }
+            part("Horario Subform"; "Horario Subform")
+            {
+                ApplicationArea = All;
+                SubPageLink = "Id Horario" = field("Id Horario");
+            }
         }
         area(FactBoxes)
         {
