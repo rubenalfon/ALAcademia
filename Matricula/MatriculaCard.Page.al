@@ -54,7 +54,7 @@ page 50113 "Ficha Matricula"
             {
                 Caption = 'Course', comment = 'ESP="Curso"';
                 ApplicationArea = All;
-                RunObject = page "Carta Curso";
+                RunObject = page "Ficha Curso";
                 Image = Certificate;
                 RunPageLink = "Id Curso" = field("Curso Referencia");
             }
@@ -63,7 +63,7 @@ page 50113 "Ficha Matricula"
             {
                 Caption = 'Student', comment = 'ESP="Estudiante"';
                 ApplicationArea = All;
-                RunObject = page Alumno;
+                RunObject = page "Ficha Alumno";
                 Image = User;
                 RunPageLink = "Id Alumno" = field("Alumno Referencia");
             }

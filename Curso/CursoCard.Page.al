@@ -45,7 +45,7 @@ page 50111 "Ficha Curso"
                 Caption = 'Teacher', comment = 'ESP="Profesor"';
                 field("Id Profesor"; Rec."Id Profesor")
                 {
-                    Caption = 'Teacher No', comment = 'ESP="Profesor"';
+                    Caption = 'Teacher No.', comment = 'ESP="Nº Profesor"';
                     ApplicationArea = All;
                     Importance = Promoted;
                 }

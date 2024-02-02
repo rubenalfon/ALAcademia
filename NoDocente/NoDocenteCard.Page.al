@@ -16,12 +16,14 @@ page 50106 "Ficha No Docente"
                 {
                     Caption = 'No.', comment = 'ESP="Nº"';
                     ApplicationArea = All;
+                    ShowMandatory = true;
                 }
                 field(Nombre; Rec.Nombre)
                 {
                     Caption = 'Name', comment = 'ESP="Nombre"';
                     ApplicationArea = All;
                     Importance = Promoted;
+                    ShowMandatory = true;
                 }
             }
             group(DireccionContacto)
@@ -56,6 +58,7 @@ page 50106 "Ficha No Docente"
                         Caption = 'Postal Code', comment = 'ESP="Código Postal"';
                         Importance = Promoted;
                         ApplicationArea = All;
+                        ShowMandatory = true;
                     }
                 }
                 group(DetalleContacto)
@@ -66,6 +69,8 @@ page 50106 "Ficha No Docente"
                         Caption = 'Phone No.', comment = 'ESP="Nº Teléfono"';
                         Importance = Promoted;
                         ApplicationArea = All;
+                        ShowMandatory = true;
+                        NotBlank = true;
                     }
                 }
             }
