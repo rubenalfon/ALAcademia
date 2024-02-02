@@ -98,6 +98,7 @@ page 50101 "Ficha Alumno"
                 ApplicationArea = All;
                 RunObject = page "Ficha Matricula";
                 RunPageMode = Create;
+                RunPageLink = "Alumno Referencia" = field("Id Alumno");
                 Promoted = true;
                 PromotedCategory = Process;
                 Image = AddContacts;

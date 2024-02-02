@@ -1,6 +1,6 @@
 page 50112 "Curso Card Factbox"
 {
-    Caption = 'Course Statistics', comment = 'ESP="Estadisticas Curso"';
+    Caption = 'Statistics', comment = 'ESP="Estadísticas"';
     PageType = CardPart;
     SourceTable = Curso;
 

@@ -1,6 +1,6 @@
 page 50115 "FactBox Profesor"
 {
-    Caption = 'Details', comment = 'ESP="Detalles"';
+    Caption = 'Statistics', comment = 'ESP="Estadísticas"';
     PageType = CardPart;
     SourceTable = Profesor;
 
