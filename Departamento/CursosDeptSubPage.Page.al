@@ -48,7 +48,7 @@ page 50117 "Subpagina Cursos Dept."
                     Caption = 'Tuitions', comment = 'ESP="Matrículas"';
                     ApplicationArea = All;
                     RunObject = page Matriculas;
-                    RunPageMode = Create;
+                    RunPageLink = "Curso Referencia" = field("Id Curso");
                     Image = ProfileCalendar;
                 }
 
@@ -58,6 +58,7 @@ page 50117 "Subpagina Cursos Dept."
                     ApplicationArea = All;
                     RunObject = page "Ficha Curso";
                     RunPageLink = "Id Curso" = field("Id Curso");
+                    RunPageMode = View;
                     Image = LineDescription;
                 }
             }
