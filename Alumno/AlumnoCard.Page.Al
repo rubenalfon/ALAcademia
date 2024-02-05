@@ -97,11 +97,21 @@ page 50101 "Ficha Alumno"
                 Caption = 'New Tuition', comment = 'ESP="Nueva Matrícula"';
                 ApplicationArea = All;
                 RunObject = page "Ficha Matricula";
-                RunPageMode = Create;
+                AccessByPermission = TableData Matricula = RIM;
                 RunPageLink = "Alumno Referencia" = field("Id Alumno");
+                RunPageMode = Create;
                 Promoted = true;
                 PromotedCategory = Process;
                 Image = AddContacts;
+                trigger OnAction()
+                var
+                    Matricula: Record Matricula;
+                begin
+                    Matricula."Alumno Referencia" := Rec."Id Alumno";
+                    Matricula.Insert(true);
+                    Commit();
+                    Page.Run(Page::"Ficha Matricula", Matricula);
+                end;
             }
 
         }

@@ -85,4 +85,19 @@ page 50111 "Ficha Curso"
         }
 
     }
+
+    actions
+    {
+        area(Creation)
+        {
+            action(Horarios)
+            {
+                Caption = 'New Schedule', comment = 'ESP="Nuevo horario"';
+                ApplicationArea = All;
+                RunObject = page Horarios;
+                RunPageMode = Create;
+                Image = New;
+            }
+        }
+    }
 }
