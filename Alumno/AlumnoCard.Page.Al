@@ -100,7 +100,6 @@ page 50101 "Ficha Alumno"
                 AccessByPermission = TableData Matricula = RIM;
                 RunPageLink = "Alumno Referencia" = field("Id Alumno");
                 RunPageMode = Create;
-                RunPageLink = "Alumno Referencia" = field("Id Alumno");
                 Promoted = true;
                 PromotedCategory = Process;
                 Image = AddContacts;
