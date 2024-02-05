@@ -16,7 +16,7 @@ table 50108 "Admin Cue"
 
     keys
     {
-        key(Key1; MyField)
+        key(pk; "Primary Key")
         {
             Clustered = true;
         }
