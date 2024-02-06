@@ -14,10 +14,6 @@ page 50118 "Admin. Academia Role Center"
             // part("Admin Cue"; "Admin Cue") {
             //     ApplicationArea = All;
             // }
-            part(Control1907692008; "My Customers")
-            {
-                ApplicationArea = Basic, Suite;
-            }
         }
     }
 
@@ -68,7 +64,6 @@ page 50118 "Admin. Academia Role Center"
                 RunObject = Page Alumnos;
             }
         }
-
         area(Sections)
         {
             group(Personal)
@@ -179,13 +174,40 @@ page 50118 "Admin. Academia Role Center"
         }
         area(Processing) // Acciones de creación.
         {
-            action(A)
+            action("Nuevo Alumno")
             {
-                Caption = 'EnglishText', comment = 'ESP="YourLanguageText"';
                 ApplicationArea = All;
+                Caption = 'Student', comment = 'ESP="Alumno"';
+                Image = Add;
+                RunObject = Page "Ficha Alumno";
+                RunPageMode = Create;
+            }
 
-                RunObject = Page "Sales Order List";
+            group(Empleados)
+            {
+                Caption = 'Staff', comment = 'ESP="Empleados"';
+                action(Profesor)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Teacher', comment = 'ESP="Profesor"';
+                    RunObject = Page "Ficha Profesor";
+                    RunPageMode = Create;
+                }
+                action("Non-Teachers")
+                {
+                    Caption = 'Non-Teachers', comment = 'ESP="No docentes"';
+                    ApplicationArea = All;
+                    RunObject = Page "Ficha No Docente";
+                    RunPageMode = Create;
+                }
+            }
 
+            action(Curso)
+            {
+                Caption = 'Course', comment = 'ESP="Curso"';
+                ApplicationArea = All;
+                RunObject = Page "Ficha Curso";
+                RunPageMode = Create;
             }
         }
     }
