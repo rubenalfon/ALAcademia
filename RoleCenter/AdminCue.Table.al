@@ -26,11 +26,17 @@ table 50108 "Admin Cue"
             FieldClass = FlowField;
             CalcFormula = count(Alumno);
         }
-        field(5; "Prof Ayudantes"; Blob)
+        field(5; "Ayudantes Profesor"; Integer)
         {
-            DataClassification = ToBeClassified;
+            FieldClass = FlowField;
+            CalcFormula = count("No Docente" where("Id Profesor" = filter(> 0),
+            "Id Profesor" = field("Id Profesor Filter")));
         }
         field(6; "Id Dept. Filter"; Code[10])
+        {
+            FieldClass = FlowFilter;
+        }
+        field(7; "Id Profesor Filter"; Code[10])
         {
             FieldClass = FlowFilter;
         }
