@@ -14,6 +14,10 @@ page 50118 "Admin. Academia Role Center"
             // part("Admin Cue"; "Admin Cue") {
             //     ApplicationArea = All;
             // }
+            part("Cursos part"; "Cursos part")
+            {
+                ApplicationArea = All;
+            }
         }
     }
 
@@ -166,8 +170,6 @@ page 50118 "Admin. Academia Role Center"
                 {
                     ApplicationArea = Suite;
                     Caption = 'Workflows', comment = 'ESP="Flujos de trabajo"';
-                    Promoted = true;
-                    PromotedCategory = Process;
                     RunObject = Page Workflows;
                 }
             }
