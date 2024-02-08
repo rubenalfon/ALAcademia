@@ -11,9 +11,10 @@ page 50118 "Admin. Academia Role Center"
             {
                 ApplicationArea = All;
             }
-            // part("Admin Cue"; "Admin Cue") {
-            //     ApplicationArea = All;
-            // }
+            part("Admin Cues"; "Administrative Activities")
+            {
+                ApplicationArea = All;
+            }
             part("Cursos part"; "Cursos part")
             {
                 ApplicationArea = All;

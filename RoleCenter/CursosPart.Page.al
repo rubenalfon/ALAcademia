@@ -1,4 +1,4 @@
-page 50120 "Cursos part"
+page 50121 "Cursos part"
 {
     Caption = 'Courses', comment = 'ESP="Cursos"';
     PageType = ListPart;
