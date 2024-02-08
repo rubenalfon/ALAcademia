@@ -75,7 +75,7 @@ page 50111 "Ficha Curso"
             part("Curso Card Factbox"; "Curso Card Factbox")
             {
                 ApplicationArea = All;
-                SubPageLink = "Id Horario" = field("Id Horario");
+                SubPageLink = "Id Curso" = field("Id Curso");
             }
             systempart(Notas; Notes)
             {
