@@ -9,39 +9,44 @@ page 50120 "Administrative Activities"
     {
         area(Content)
         {
-            cuegroup(Departamento)
+            cuegroup(General)
             {
-                Caption = 'Departments', comment = 'ESP="Departamentos"';
-                //CuegroupLayout = Wide;
-                field("Num Cursos Dept."; Rec."Num Cursos Dept.")
+                CuegroupLayout = Wide;
+                field("Num Cursos Horario"; Rec."Num Cursos Horario")
                 {
-                    Caption = 'No. of Courses', comment = 'ESP="Nº de Cursos"';
+                    Caption = 'Courses w/o Schedule', comment = 'ESP="Cursos sin Horario"';
                     ApplicationArea = All;
                     DrillDownPageId = Cursos;
                 }
+            }
+            cuegroup(Cursos)
+            {
 
-                field("Num Dept Tarifa"; Rec."Num Dept Tarifa")
+            }
+            cuegroup(Departamentos)
+            {
+                Caption = 'Departments', comment = 'ESP="Departamentos"';
+                //CuegroupLayout = Wide;
+                field("Num. Depts"; Rec."Num. Depts")
                 {
-                    Caption = 'Depts. with Fees', comment = 'ESP="Depts. con Tarifas"';
+                    Caption = 'No. of Departments', comment = 'ESP="Nº de Departamentos"';
                     ApplicationArea = All;
                     DrillDownPageId = Departamentos;
                 }
-
             }
 
-            cuegroup(Profesor)
+            cuegroup(Profesores)
             {
                 Caption = 'Teachers', comment = 'ESP="Profesores"';
-                field("Ayudantes Profesor"; Rec."Ayudantes Profesor")
+                field("Profesores Jefes"; Rec."Profesores Jefes")
                 {
-                    Caption = 'Total Helpers', comment = 'ESP="Ayudantes Totales"';
+                    Caption = 'Heads of Dept.', comment = 'ESP="Jefes de Dept."';
                     ApplicationArea = All;
-                    DrillDownPageId = "No Docentes";
-
+                    DrillDownPageId = Profesores;
                 }
             }
 
-            cuegroup(Alumno)
+            cuegroup(Alumnos)
             {
                 Caption = 'Students', comment = 'ESP="Alumnos"';
                 field("Num Alumnos"; Rec."Num Alumnos")

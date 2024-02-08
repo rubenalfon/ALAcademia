@@ -86,6 +86,11 @@ table 50107 "Profesor"
         {
             FieldClass = FlowFilter;
         }
+        field(17; "Profesor Jefe"; Boolean)
+        {
+            FieldClass = FlowField;
+            CalcFormula = exist(Departamento where("Profesor Jefe" = field("Id Profesor")));
+        }
     }
 
     keys
