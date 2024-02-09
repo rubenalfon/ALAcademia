@@ -134,6 +134,46 @@ page 50120 "Administrative Activities"
             }
         }
     }
+    actions
+    {
+        area(Processing)
+        {
+            action("Nuevo Alumno")
+            {
+                ApplicationArea = All;
+                Caption = 'Student', comment = 'ESP="Alumno"';
+                Image = Add;
+                RunObject = Page "Ficha Alumno";
+                RunPageMode = Create;
+            }
+
+            action(Profesor)
+            {
+                ApplicationArea = All;
+                Caption = 'Teacher', comment = 'ESP="Profesor"';
+                Image = Add;
+                RunObject = Page "Ficha Profesor";
+                RunPageMode = Create;
+            }
+            action("Non-Teachers")
+            {
+                Caption = 'Non-Teachers', comment = 'ESP="No docentes"';
+                ApplicationArea = All;
+                Image = Add;
+                RunObject = Page "Ficha No Docente";
+                RunPageMode = Create;
+            }
+
+            action(Curso)
+            {
+                Caption = 'Course', comment = 'ESP="Curso"';
+                ApplicationArea = All;
+                Image = Add;
+                RunObject = Page "Ficha Curso";
+                RunPageMode = Create;
+            }
+        }
+    }
 
     trigger OnOpenPage()
     begin

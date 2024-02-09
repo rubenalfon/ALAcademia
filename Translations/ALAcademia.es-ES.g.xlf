@@ -802,6 +802,30 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Control Sum Sal Profesores - Property Caption</note>
           <target>Total de Salarios</target>
         </trans-unit>
+        <trans-unit id="Page 582556761 - Action 4017500548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Course</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Curso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Curso - Property Caption</note>
+          <target>Curso</target>
+        </trans-unit>
+        <trans-unit id="Page 582556761 - Action 3065879751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Non-Teachers</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No docentes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Non-Teachers - Property Caption</note>
+          <target>No docentes</target>
+        </trans-unit>
+        <trans-unit id="Page 582556761 - Action 3350250109 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Student</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Alumno"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Nuevo Alumno - Property Caption</note>
+          <target>Alumno</target>
+        </trans-unit>
+        <trans-unit id="Page 582556761 - Action 4181160540 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Teacher</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Profesor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Profesor - Property Caption</note>
+          <target>Profesor</target>
+        </trans-unit>
         <trans-unit id="Page 1854860289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Students</source>
           <note from="Developer" annotates="general" priority="2">ESP="Alumnos"</note>
