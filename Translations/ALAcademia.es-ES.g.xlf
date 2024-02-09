@@ -676,6 +676,36 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Property Caption</note>
           <target>Actividades Administrativas</target>
         </trans-unit>
+        <trans-unit id="Page 582556761 - Control 1011952849 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Actions</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Acciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Control Acciones - Property Caption</note>
+          <target>Acciones</target>
+        </trans-unit>
+        <trans-unit id="Page 582556761 - Action 4017500548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Course</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nuevo Curso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Curso - Property Caption</note>
+          <target>Nuevo Curso</target>
+        </trans-unit>
+        <trans-unit id="Page 582556761 - Action 3065879751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Non-Teacher</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nuevo No docente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Non-Teachers - Property Caption</note>
+          <target>Nuevo No docente</target>
+        </trans-unit>
+        <trans-unit id="Page 582556761 - Action 3350250109 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Student</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nuevo Alumno"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Nuevo Alumno - Property Caption</note>
+          <target>Nuevo Alumno</target>
+        </trans-unit>
+        <trans-unit id="Page 582556761 - Action 4181160540 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New Teacher</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nuevo Profesor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Profesor - Property Caption</note>
+          <target>Nuevo Profesor</target>
+        </trans-unit>
         <trans-unit id="Page 582556761 - Control 1932900837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Courses</source>
           <note from="Developer" annotates="general" priority="2">ESP="Cursos"</note>
@@ -801,30 +831,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Total de Salarios"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Control Sum Sal Profesores - Property Caption</note>
           <target>Total de Salarios</target>
-        </trans-unit>
-        <trans-unit id="Page 582556761 - Action 4017500548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Course</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Curso"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Curso - Property Caption</note>
-          <target>Curso</target>
-        </trans-unit>
-        <trans-unit id="Page 582556761 - Action 3065879751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Non-Teachers</source>
-          <note from="Developer" annotates="general" priority="2">ESP="No docentes"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Non-Teachers - Property Caption</note>
-          <target>No docentes</target>
-        </trans-unit>
-        <trans-unit id="Page 582556761 - Action 3350250109 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Student</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Alumno"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Nuevo Alumno - Property Caption</note>
-          <target>Alumno</target>
-        </trans-unit>
-        <trans-unit id="Page 582556761 - Action 4181160540 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Teacher</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Profesor"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Profesor - Property Caption</note>
-          <target>Profesor</target>
         </trans-unit>
         <trans-unit id="Page 1854860289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Students</source>

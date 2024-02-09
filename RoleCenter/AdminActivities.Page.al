@@ -75,6 +75,7 @@ page 50120 "Administrative Activities"
                     ApplicationArea = All;
                     DrillDownPageId = Departamentos;
                 }
+
                 field("Depts con Tarifas"; Rec."Depts con Tarifas")
                 {
                     Caption = 'Departments with Fees', comment = 'ESP="Departamentos con Tarifas"';
@@ -132,45 +133,45 @@ page 50120 "Administrative Activities"
                     DrillDownPageId = "No Docentes";
                 }
             }
-        }
-    }
-    actions
-    {
-        area(Processing)
-        {
-            action("Nuevo Alumno")
+            cuegroup(Acciones)
             {
-                ApplicationArea = All;
-                Caption = 'Student', comment = 'ESP="Alumno"';
-                Image = Add;
-                RunObject = Page "Ficha Alumno";
-                RunPageMode = Create;
-            }
-
-            action(Profesor)
-            {
-                ApplicationArea = All;
-                Caption = 'Teacher', comment = 'ESP="Profesor"';
-                Image = Add;
-                RunObject = Page "Ficha Profesor";
-                RunPageMode = Create;
-            }
-            action("Non-Teachers")
-            {
-                Caption = 'Non-Teachers', comment = 'ESP="No docentes"';
-                ApplicationArea = All;
-                Image = Add;
-                RunObject = Page "Ficha No Docente";
-                RunPageMode = Create;
-            }
-
-            action(Curso)
-            {
-                Caption = 'Course', comment = 'ESP="Curso"';
-                ApplicationArea = All;
-                Image = Add;
-                RunObject = Page "Ficha Curso";
-                RunPageMode = Create;
+                Caption = 'Actions', comment = 'ESP="Acciones"';
+                CuegroupLayout = Wide;
+                actions
+                {
+                    action("Nuevo Alumno")
+                    {
+                        ApplicationArea = All;
+                        Caption = 'New Student', comment = 'ESP="Nuevo Alumno"';
+                        Image = TileNew;
+                        RunObject = Page "Ficha Alumno";
+                        RunPageMode = Create;
+                    }
+                    action(Profesor)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'New Teacher', comment = 'ESP="Nuevo Profesor"';
+                        Image = TileNew;
+                        RunObject = Page "Ficha Profesor";
+                        RunPageMode = Create;
+                    }
+                    action("Non-Teachers")
+                    {
+                        Caption = 'New Non-Teacher', comment = 'ESP="Nuevo No docente"';
+                        ApplicationArea = All;
+                        Image = TileNew;
+                        RunObject = Page "Ficha No Docente";
+                        RunPageMode = Create;
+                    }
+                    action(Curso)
+                    {
+                        Caption = 'New Course', comment = 'ESP="Nuevo Curso"';
+                        ApplicationArea = All;
+                        Image = TileNew;
+                        RunObject = Page "Ficha Curso";
+                        RunPageMode = Create;
+                    }
+                }
             }
         }
     }
