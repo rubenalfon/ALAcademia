@@ -12,7 +12,7 @@ page 50119 "Headline RC Admin Academia"
             {
                 ShowCaption = false;
                 Visible = UserGreetingVisible;
-                field(GreetingText; RCHeadlinesPageCommon.GetGreetingText())
+                field(GreetingText; GreetingText)
                 {
                     ApplicationArea = Basic, Suite;
                     Caption = 'Greeting headline', comment = 'ESP="Título saludo"';
@@ -22,18 +22,11 @@ page 50119 "Headline RC Admin Academia"
             group(Control2)
             {
                 ShowCaption = false;
-                Visible = DefaultFieldsVisible;
-                field(DocumentationText; RCHeadlinesPageCommon.GetDocumentationText())
+                field(GreetingText2; GreetingText2)
                 {
                     ApplicationArea = Basic, Suite;
-                    Caption = 'Documentation headline', comment = 'ESP="Título documentación."';
-                    DrillDown = true;
+                    Caption = 'Greeting headline', comment = 'ESP="Título saludo"';
                     Editable = false;
-
-                    trigger OnDrillDown()
-                    begin
-                        HyperLink(RCHeadlinesPageCommon.DocumentationUrlTxt());
-                    end;
                 }
             }
         }
@@ -52,5 +45,7 @@ page 50119 "Headline RC Admin Academia"
         [InDataSet]
         UserGreetingVisible: Boolean;
         RCHeadlinesPageCommon: Codeunit "RC Headlines Page Common";
+        GreetingText: Label 'Hola';
+        GreetingText2: Label 'Bienvenido';
 }
 
