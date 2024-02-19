@@ -40,4 +40,23 @@ page 50100 "Alumnos"
             }
         }
     }
+    actions
+    {
+        area(Reporting)
+        {
+
+            action(Pruebas)
+            {
+                ApplicationArea = All;
+                Caption = 'AAAAAAAAAAAAAAAAAAAAA';
+
+                trigger OnAction()
+                var
+                    codeunit: Codeunit "Codeunit Alumno";
+                begin
+                    codeunit.AlumnosPorDiaSemana();
+                end;
+            }
+        }
+    }
 }

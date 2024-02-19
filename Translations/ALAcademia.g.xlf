@@ -793,6 +793,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nº Teléfono"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Alumnos - Control Telefono - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1854860289 - Action 2732340270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AAAAAAAAAAAAAAAAAAAAA</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Alumnos - Action Pruebas - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2756439275 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Statistics</source>
           <note from="Developer" annotates="general" priority="2">ESP="Estadísticas"</note>
