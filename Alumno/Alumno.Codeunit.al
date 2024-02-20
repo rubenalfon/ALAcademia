@@ -13,24 +13,36 @@ codeunit 50100 "Codeunit Alumno"
         DiaSemana: Integer;
         Lineashorario: Record "Linea Horario";
         Cursos: Record Curso;
+        Curso: Record Curso;
         CursosHoy: Integer;
         Cadena: Text[100];
     begin
-        DiaSemana := Date2DWY(WorkDate(), 1);
+        DiaSemana := Date2DWY(Today(), 1);
 
         Cadena += 'Cursos hoy: \';
+
+        Lineashorario.SetFilter(Dia, '=%1', DiaSemana);
+        //Cursos.SetFilter("Id Horario", '=%1', Lineashorario."Id Horario");
+
+        //PAGE.RunModal(PAGE::"Cursos part", Cursos);
+
         if Lineashorario.findset() then
             repeat
-                if (Format(Lineashorario.Dia, 1, '<Number>') = Format(DiaSemana)) then begin
-
-                    if Cursos.findset() then
-                        repeat
-                            if (Cursos."Id Horario" = Lineashorario."Id Horario") then
-                                Cadena += '  · ' + Cursos.Nombre + '\';
-                            CursosHoy += 1;
-                        until Cursos.next() = 0;
-                end;
+                Cursos.SetFilter("Id Horario", '=%1', Lineashorario."Id Horario");
+                if Cursos.findset() then
+                    repeat
+                        Cadena += '  · ' + Cursos.Nombre + '\';
+                        CursosHoy += 1;
+                    until Cursos.next() = 0;
             until Lineashorario.next() = 0;
+
+        Cursos.SetFilter("Id Horario", '=%1', Lineashorario."Id Horario");
+        if Cursos.findset() then
+            repeat
+                Message(Cursos.Nombre);
+            until Cursos.next() = 0;
+
+
 
         Cadena += 'Hoy hay ' + Format(CursosHoy) + ' líneas de horario.';
         Message(Cadena);
