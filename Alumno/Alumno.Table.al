@@ -69,4 +69,24 @@ table 50100 Alumno
             Caption = 'Students', comment = 'ESP="Alumnos"';
         }
     }
+
+    // Funciona fino, ahora toca mirar donde webos va
+    procedure CalcSumaTarifas(): Decimal
+    var
+        Curso: Record Curso;
+        Matricula: Record Matricula;
+        Total: Decimal;
+    begin
+        Matricula.SetFilter("Alumno Referencia", '=%1', Rec."Id Alumno");
+        if Matricula.findset() then
+            repeat
+                Curso.SetFilter("Id Curso", '=%1', Matricula."Curso Referencia");
+                if Curso.findset() then
+                    repeat
+                        Total += Curso."Tarifa Laboratorio"
+                    until Curso.next() = 0;
+            until Matricula.next() = 0;
+        Message(Format(Total));
+        exit(Total);
+    end;
 }
