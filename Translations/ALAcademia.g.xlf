@@ -118,6 +118,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Sum Sal Profesores - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3063379904 - Field 940074596 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Campo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Campo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3063379904 - Field 2849675335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cod. Pais</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -162,6 +167,11 @@
           <source>Sexo</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Sexo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3063379904 - Field 2714520713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sum. Tarifas</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Sum. Tarifas - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3063379904 - Field 3472582580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Telefono</source>

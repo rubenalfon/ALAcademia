@@ -53,6 +53,14 @@ table 50100 Alumno
                 WHERE("Country/Region Code" = FIELD("Cod. Pais"));
             ValidateTableRelation = false;
         }
+        field(11; "Sum. Tarifas"; Decimal)
+        {
+            FieldClass = FlowField;
+        }
+        field(12; Campo; Decimal)
+        {
+            FieldClass = FlowFilter;
+        }
     }
     keys
     {
