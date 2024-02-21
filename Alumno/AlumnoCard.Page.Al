@@ -39,6 +39,10 @@ page 50101 "Ficha Alumno"
                     ApplicationArea = All;
                     ShowMandatory = true;
                 }
+                field("Sum. Tarifas"; Rec."Sum. Tarifas")
+                {
+                    ApplicationArea = All;
+                }
             }
             group(DireccionContacto)
             {

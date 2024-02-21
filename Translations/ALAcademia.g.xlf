@@ -23,31 +23,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Depts con Tarifas - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 512860144 - Field 2375695971 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id Alumno Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id Alumno Filter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 512860144 - Field 4248146695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id Curso Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id Curso Filter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 512860144 - Field 890740226 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id Dept. Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id Dept. Filter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 512860144 - Field 208601474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id No Docente Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id No Docente Filter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 512860144 - Field 202899879 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id Profesor Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id Profesor Filter - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 512860144 - Field 4103716198 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Media Sal No Docentes</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -117,11 +92,6 @@
           <source>Sum Sal Profesores</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Sum Sal Profesores - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 3063379904 - Field 940074596 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Campo</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Campo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3063379904 - Field 2849675335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cod. Pais</source>

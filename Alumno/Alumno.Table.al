@@ -55,11 +55,7 @@ table 50100 Alumno
         }
         field(11; "Sum. Tarifas"; Decimal)
         {
-            FieldClass = FlowField;
-        }
-        field(12; Campo; Decimal)
-        {
-            FieldClass = FlowFilter;
+            Editable = false;
         }
     }
     keys
@@ -79,7 +75,7 @@ table 50100 Alumno
     }
 
     // Funciona fino, ahora toca mirar donde webos va
-    procedure CalcSumaTarifas(): Decimal
+    procedure CalcSumaTarifas()
     var
         Curso: Record Curso;
         Matricula: Record Matricula;
@@ -94,7 +90,6 @@ table 50100 Alumno
                         Total += Curso."Tarifa Laboratorio"
                     until Curso.next() = 0;
             until Matricula.next() = 0;
-        Message(Format(Total));
-        exit(Total);
+        Rec."Sum. Tarifas" := Total;
     end;
 }
