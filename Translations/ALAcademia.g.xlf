@@ -203,6 +203,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Cursos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Curso - FieldGroup DropDown - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 323353982 - Method 1627140692 - NamedType 1313023698" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Office is already in use by another Department.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="El Despacho ya está siendo utilizado por otro Departamento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Departamento - Method Caca - NamedType ErrorLabel</note>
+        </trans-unit>
         <trans-unit id="Table 323353982 - Field 196183225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Despacho</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -747,6 +752,11 @@
           <source>Total Salaries</source>
           <note from="Developer" annotates="general" priority="2">ESP="Total de Salarios"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Control Sum Sal Profesores - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582556761 - Action 3050724617 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cues Configuration</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configuración de Pilas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Editar - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1854860289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Students</source>

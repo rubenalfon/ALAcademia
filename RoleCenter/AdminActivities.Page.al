@@ -17,6 +17,7 @@ page 50120 "Administrative Activities"
                     Caption = 'Heads of Department', comment = 'ESP="Jefes de Departamento"';
                     ApplicationArea = All;
                     DrillDownPageId = Profesores;
+                    StyleExpr = JefesDeptStyle;
                 }
                 field("Num Alumnos"; Rec."Num Alumnos")
                 {
@@ -35,6 +36,7 @@ page 50120 "Administrative Activities"
                     Caption = 'Courses without Schedule', comment = 'ESP="Cursos sin Horario"';
                     ApplicationArea = All;
                     DrillDownPageId = Cursos;
+                    StyleExpr = CursosHorarioStyle;
                 }
             }
             cuegroup(Cursos)
@@ -51,6 +53,7 @@ page 50120 "Administrative Activities"
                     Caption = 'Courses without Students', comment = 'ESP="Cursos sin Alumnos"';
                     ApplicationArea = All;
                     DrillDownPageId = Cursos;
+                    StyleExpr = CursosMatriculasStyle;
                 }
                 field("Curso Max Tarifa"; Rec."Curso Max Tarifa")
                 {
@@ -91,6 +94,7 @@ page 50120 "Administrative Activities"
                     Caption = 'Teachers', comment = 'ESP="Profesores"';
                     ApplicationArea = All;
                     DrillDownPageId = Profesores;
+                    StyleExpr = ProfesoresStyle;
                 }
                 field("Sum Sal Profesores"; Rec."Sum Sal Profesores")
                 {
@@ -119,6 +123,7 @@ page 50120 "Administrative Activities"
                     Caption = 'Assistants', comment = 'ESP="Ayudantes"';
                     ApplicationArea = All;
                     DrillDownPageId = "No Docentes";
+                    StyleExpr = AyudantesStyle;
                 }
                 field("Sum Sal No Docentes"; Rec."Sum Sal No Docentes")
                 {
@@ -174,7 +179,33 @@ page 50120 "Administrative Activities"
                 }
             }
         }
+
     }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(Editar)
+            {
+                Caption = 'Cues Configuration', comment = 'ESP="Configuración de Pilas"';
+                ApplicationArea = All;
+                Image = Setup;
+                trigger OnAction()
+                begin
+                    CuesAndKPIs.OpenCustomizePageForCurrentUser(50108);
+                end;
+            }
+        }
+    }
+
+    var
+        CuesAndKPIs: Codeunit "Cues And KPIs";
+        CursosMatriculasStyle: Text[20];
+        CursosHorarioStyle: Text[20];
+        ProfesoresStyle: Text[20];
+        AyudantesStyle: Text[20];
+        JefesDeptStyle: Text[20];
 
     trigger OnOpenPage()
     begin
@@ -183,5 +214,47 @@ page 50120 "Administrative Activities"
             Rec.Init;
             Rec.Insert;
         end;
+    end;
+
+    trigger OnAfterGetRecord()
+    begin
+        CheckFieldsAndSetStyle();
+    end;
+
+    local procedure CheckFieldsAndSetStyle()
+    begin
+        if (Rec."Cursos Matriculas" = 0) then
+            CursosMatriculasStyle := 'Favorable'
+        else
+            if (Rec."Cursos Matriculas" > 5) then
+                CursosMatriculasStyle := 'Unfavorable'
+            else
+                CursosMatriculasStyle := 'Ambiguous';
+
+        if (Rec."Num Cursos Horario" = 0) then
+            CursosHorarioStyle := 'Favorable'
+        else
+            CursosHorarioStyle := 'Unfavorable';
+
+        if (Rec."Num Profesores" < Rec."Num Depts") then
+            ProfesoresStyle := 'Unfavorable'
+        else
+            if (Rec."Num Profesores" = Rec."Num Depts") then
+                ProfesoresStyle := 'Ambiguous'
+            else
+                ProfesoresStyle := 'Favorable';
+
+        if (Rec."Num Ayudantes" = 0) then
+            AyudantesStyle := 'Unfavorable'
+        else
+            if (Rec."Num Ayudantes" < Rec."Num Profesores" / 2) then
+                AyudantesStyle := 'Ambiguous'
+            else
+                AyudantesStyle := 'Favorable';
+
+        if (Rec."Profesores Jefes" < Rec."Num Depts") then
+            JefesDeptStyle := 'Unfavorable'
+        else
+            JefesDeptStyle := 'Favorable';
     end;
 }

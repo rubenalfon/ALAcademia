@@ -48,4 +48,21 @@ table 50105 Departamento
         }
     }
 
+    trigger OnModify()
+    begin
+        CheckDespacho();
+    end;
+
+    local procedure CheckDespacho()
+    var
+        ErrorLabel: Label ' is already in use ', comment = 'ESP=" ya está en uso "';
+        Departamento: Record Departamento;
+    begin
+        if Departamento.findset() then
+            repeat
+                if (Rec.Despacho = Departamento.Despacho) then
+                    FieldError(Rec.Despacho, ErrorLabel);
+            until Departamento.next() = 0;
+    end;
+
 }
