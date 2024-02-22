@@ -162,7 +162,7 @@ page 50120 "Administrative Activities"
                     }
                     action("Non-Teachers")
                     {
-                        Caption = 'New Non-Teacher', comment = 'ESP="Nuevo No docente"';
+                        Caption = 'New Non-Teacher', comment = 'ESP="Nuevo No Docente"';
                         ApplicationArea = All;
                         Image = TileNew;
                         RunObject = Page "Ficha No Docente";

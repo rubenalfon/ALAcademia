@@ -1,6 +1,6 @@
 page 50122 "Lineas Horario Hoy"
 {
-    Caption = 'Schedule Lines Today', comment = 'ESP="Líneas Horario Hoy"';
+    Caption = 'Today''s Schedule Lines', comment = 'ESP="Líneas Horario de Hoy"';
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Lists;

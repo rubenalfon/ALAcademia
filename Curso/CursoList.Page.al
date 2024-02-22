@@ -42,7 +42,7 @@ page 50105 "Cursos"
                 }
                 field(Profesor; Rec."Id Profesor")
                 {
-                    Caption = 'Teacher No.', comment = 'ESP="Nº profesor"';
+                    Caption = 'Teacher No.', comment = 'ESP="Nº Profesor"';
                     ApplicationArea = All;
                 }
                 field("Id Dept. Profesor"; Rec."Id Dept. Profesor")
@@ -59,16 +59,16 @@ page 50105 "Cursos"
         {
             action("Cursos Hoy")
             {
-                Caption = 'Today''s Course List', comment = 'ESP="Lista de Cursos Hoy"';
+                Caption = 'Today''s Course List', comment = 'ESP="Lista de Cursos de Hoy"';
                 ApplicationArea = All;
                 trigger OnAction()
                 begin
-                    AlumnosPorDiaSemana();
+                    CursosPorDiaSemana();
                 end;
             }
         }
     }
-    procedure AlumnosPorDiaSemana()
+    procedure CursosPorDiaSemana()
     var
         DiaSemana: Integer;
         LineaHorario: Record "Linea Horario";

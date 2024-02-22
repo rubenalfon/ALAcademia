@@ -21,7 +21,6 @@ table 50105 Departamento
         field(5; "Profesor Jefe"; Code[10])
         {
             TableRelation = Profesor where("Id Departamento" = field("Id Departamento"));
-
         }
         field(4; "Promedio Tarifas"; Decimal)
         {

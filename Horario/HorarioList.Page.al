@@ -33,11 +33,4 @@ page 50104 Horarios
             }
         }
     }
-    actions
-    {
-        area(Creation)
-        {
-
-        }
-    }
 }

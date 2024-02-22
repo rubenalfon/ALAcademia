@@ -15,7 +15,7 @@ page 50119 "Headline RC Admin Academia"
                 field(GreetingText; GreetingText)
                 {
                     ApplicationArea = Basic, Suite;
-                    Caption = 'Greeting headline', comment = 'ESP="Título saludo"';
+                    Caption = 'Greeting Headline', comment = 'ESP="Título Saludo"';
                     Editable = false;
                 }
             }
@@ -25,7 +25,7 @@ page 50119 "Headline RC Admin Academia"
                 field(GreetingText2; GreetingText2)
                 {
                     ApplicationArea = Basic, Suite;
-                    Caption = 'Greeting headline', comment = 'ESP="Título saludo"';
+                    Caption = 'Greeting Headline', comment = 'ESP="Título Saludo"';
                     Editable = false;
                 }
             }
@@ -45,7 +45,8 @@ page 50119 "Headline RC Admin Academia"
         [InDataSet]
         UserGreetingVisible: Boolean;
         RCHeadlinesPageCommon: Codeunit "RC Headlines Page Common";
-        GreetingText: Label 'Hola';
-        GreetingText2: Label 'Bienvenido';
+        GreetingText: Label 'Hello', comment = 'ESP="Hola"';
+        GreetingText2: Label 'Welcome', comment = 'ESP="Bienvenido"';
+
 }
 

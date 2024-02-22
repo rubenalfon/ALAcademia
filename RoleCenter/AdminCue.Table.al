@@ -8,13 +8,11 @@ table 50108 "Admin Cue"
         {
             DataClassification = ToBeClassified;
         }
-        // Alumnos
         field(2; "Num Alumnos"; Integer)
         {
             FieldClass = FlowField;
             CalcFormula = count(Alumno);
         }
-        // Cursos
         field(3; "Num Cursos"; Integer)
         {
             FieldClass = FlowField;
@@ -40,7 +38,6 @@ table 50108 "Admin Cue"
             FieldClass = FlowField;
             CalcFormula = count(Curso where("Num Alumnos" = const(0)));
         }
-        // Departamentos
         field(8; "Num Depts"; Integer)
         {
             FieldClass = FlowField;
@@ -52,13 +49,11 @@ table 50108 "Admin Cue"
             FieldClass = FlowField;
             CalcFormula = count(Departamento where("Promedio Tarifas" = filter(> 0)));
         }
-        // Matriculas
         field(10; "Num Matriculas"; Integer)
         {
             FieldClass = FlowField;
             CalcFormula = count(Matricula);
         }
-        // No Docentes
         field(11; "Num No Docentes"; Integer)
         {
             FieldClass = FlowField;
@@ -79,13 +74,11 @@ table 50108 "Admin Cue"
             FieldClass = FlowField;
             CalcFormula = average("No Docente".Salario);
         }
-        // Profesores
         field(15; "Num Profesores"; Integer)
         {
             FieldClass = FlowField;
             CalcFormula = count(Profesor);
         }
-        // Esto no se si funcionara
         field(16; "Profesores Jefes"; Integer)
         {
             FieldClass = FlowField;

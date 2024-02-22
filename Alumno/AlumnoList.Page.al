@@ -37,6 +37,11 @@ page 50100 "Alumnos"
                     Caption = 'Phone No.', comment = 'ESP="Nº Teléfono"';
                     ApplicationArea = All;
                 }
+                field("Sum. Tarifas"; Rec."Sum. Tarifas")
+                {
+                    Caption = 'Total Fees', comment = 'ESP="Sum. Tarifas"';
+                    ApplicationArea = All;
+                }
             }
         }
     }

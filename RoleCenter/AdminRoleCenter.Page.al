@@ -24,7 +24,7 @@ page 50118 "Admin. Academia Role Center"
 
     actions
     {
-        area(embedding) // Pages list.
+        area(embedding)
         {
             action(Profesores)
             {
@@ -89,7 +89,7 @@ page 50118 "Admin. Academia Role Center"
             }
             group("Departamentos y Cursos")
             {
-                Caption = 'Courses & Departments', comment = 'ESP="Departamentos y Cursos"';
+                Caption = 'Departments & Courses', comment = 'ESP="Departamentos y Cursos"';
                 action(Departamentos2)
                 {
                     ApplicationArea = All;
@@ -115,13 +115,13 @@ page 50118 "Admin. Academia Role Center"
                 action(LineasHorario2)
                 {
                     ApplicationArea = All;
-                    Caption = 'Schedule lines', comment = 'ESP="Lineas Horario"';
+                    Caption = 'Schedule Lines', comment = 'ESP="Líneas Horario"';
                     RunObject = Page "Lineas Horario";
                 }
             }
             group("Alumnos Matriculas")
             {
-                Caption = 'Students & Tuitions', comment = 'ESP="Alumnos y Matriculas"';
+                Caption = 'Students & Tuitions', comment = 'ESP="Alumnos y Matrículas"';
                 action(Alumnos2)
                 {
                     ApplicationArea = All;
@@ -137,7 +137,7 @@ page 50118 "Admin. Academia Role Center"
             }
             group(SetupAndExtensions)
             {
-                Caption = 'Setup & Extensions', comment = 'ESP="Configuracion y Extensiones"';
+                Caption = 'Setup & Extensions', comment = 'ESP="Configuración y Extensiones"';
                 Image = Setup;
                 action("Assisted Setup")
                 {
@@ -174,7 +174,7 @@ page 50118 "Admin. Academia Role Center"
                 }
             }
         }
-        area(Processing) // Acciones de creación.
+        area(Processing)
         {
             action("Nuevo Alumno")
             {
@@ -197,7 +197,7 @@ page 50118 "Admin. Academia Role Center"
                 }
                 action("Non-Teachers")
                 {
-                    Caption = 'Non-Teachers', comment = 'ESP="No docentes"';
+                    Caption = 'Non-Teachers', comment = 'ESP="No Docentes"';
                     ApplicationArea = All;
                     RunObject = Page "Ficha No Docente";
                     RunPageMode = Create;

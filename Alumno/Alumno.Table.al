@@ -36,7 +36,6 @@ table 50100 Alumno
         field(8; "Poblacion"; Text[100])
         {
             TableRelation = IF ("Cod. Pais" = CONST('')) "Post Code".City
-            // "Cod. Pais" no es vacío
             ELSE
             IF ("Cod. Pais" = FILTER(<> '')) "Post Code".City
                 WHERE("Country/Region Code" = FIELD("Cod. Pais"));
@@ -55,7 +54,7 @@ table 50100 Alumno
         }
         field(11; Dni; Text[9])
         {
-
+            NotBlank = true;
         }
         field(12; "Sum. Tarifas"; Decimal)
         {
