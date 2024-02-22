@@ -61,5 +61,4 @@ table 50104 Curso
             Caption = 'Courses', comment = 'ESP="Cursos"';
         }
     }
-
 }
