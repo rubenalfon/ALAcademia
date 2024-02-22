@@ -53,4 +53,32 @@ page 50105 "Cursos"
             }
         }
     }
+    actions
+    {
+        area(Navigation)
+        {
+            action("Cursos Hoy")
+            {
+                Caption = 'Today''s Course List', comment = 'ESP="Lista de Cursos Hoy"';
+                ApplicationArea = All;
+                trigger OnAction()
+                begin
+                    AlumnosPorDiaSemana();
+                end;
+            }
+        }
+    }
+    procedure AlumnosPorDiaSemana()
+    var
+        DiaSemana: Integer;
+        LineaHorario: Record "Linea Horario";
+        LabelMensaje: Label 'Today no course is being taught.', Comment = 'ESP="Hoy no se imparte ningún curso"';
+    begin
+        DiaSemana := Date2DWY(Today(), 1);
+        LineaHorario.SetFilter(Dia, '=%1', DiaSemana);
+        if (LineaHorario.FindFirst()) then
+            PAGE.RunModal(PAGE::"Lineas Horario Hoy", LineaHorario)
+        else
+            Message(LabelMensaje);
+    end;
 }

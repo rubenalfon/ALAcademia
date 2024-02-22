@@ -45,7 +45,7 @@ page 50109 Profesores
                     Caption = 'Hire Date', comment = 'ESP="Fecha Contratación"';
                     ApplicationArea = All;
                 }
-                field("Num. Cursos"; Rec."Num. Cursos")
+                field("Num. Lineas Horario"; Rec."Num. Lineas Horario")
                 {
                     Caption = 'No. of Courses', comment = 'ESP="Nº de Cursos"';
                     ApplicationArea = All;

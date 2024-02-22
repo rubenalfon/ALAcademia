@@ -13,7 +13,7 @@ page 50115 "FactBox Profesor"
                 Caption = 'No. of Assistants', comment = 'ESP="Nº de Ayudantes"';
                 ApplicationArea = All;
             }
-            field("Num. Cursos"; Rec."Num. Cursos")
+            field("Num. Lineas Horario"; Rec."Num. Lineas Horario")
             {
                 Caption = 'No. of Courses', comment = 'ESP="Nº de Cursos"';
                 ApplicationArea = All;

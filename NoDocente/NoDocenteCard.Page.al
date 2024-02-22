@@ -25,6 +25,12 @@ page 50106 "Ficha No Docente"
                     Importance = Promoted;
                     ShowMandatory = true;
                 }
+                field(Dni; Rec.Dni)
+                {
+                    Caption = 'ID', comment = 'ESP="DNI"';
+                    ApplicationArea = All;
+                    ShowMandatory = true;
+                }
             }
             group(DireccionContacto)
             {

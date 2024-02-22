@@ -99,5 +99,39 @@ page 50111 "Ficha Curso"
                 Image = New;
             }
         }
+        area(Reporting)
+        {
+            action(Alumnos)
+            {
+                Caption = 'Enrolled Students', comment = 'ESP="Alumnos Matriculados"';
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+                    AlumnosMatriculados();
+                end;
+
+            }
+        }
     }
+
+    local procedure AlumnosMatriculados()
+    var
+        Matricula: Record Matricula;
+        Alumno: Record Alumno;
+        filtro: Text;
+        LabelMensaje: Label 'There is no enrolled student.', Comment = 'ESP="No hay ningún alumno matriculado."';
+    begin
+        Matricula.SetFilter("Curso Referencia", '=%1', Rec."Id Curso");
+        if Matricula.findset() then
+            repeat
+                filtro += Matricula."Alumno Referencia" + '|';
+            until Matricula.next() = 0;
+        if (StrLen(filtro) > 0) then begin
+            filtro := filtro.Substring(1, filtro.LastIndexOf('|') - 1);
+            alumno.SetFilter("Id Alumno", filtro);
+            Page.RunModal(Page::Alumnos, alumno);
+        end else
+            Message(LabelMensaje);
+    end;
 }

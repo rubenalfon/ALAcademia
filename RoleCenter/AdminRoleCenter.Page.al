@@ -30,43 +30,43 @@ page 50118 "Admin. Academia Role Center"
             {
                 ApplicationArea = All;
                 Caption = 'Teachers', comment = 'ESP="Profesores"';
-                Image = "Order";
                 RunObject = Page Profesores;
             }
             action(NoDocentes)
             {
                 ApplicationArea = All;
                 Caption = 'Non-Teachers', comment = 'ESP="No Docentes"';
-                Image = "Order";
                 RunObject = Page "No Docentes";
             }
             action(Departamentos)
             {
                 ApplicationArea = All;
                 Caption = 'Departments', comment = 'ESP="Departamentos"';
-                Image = "Order";
                 RunObject = Page Departamentos;
             }
             action(Cursos)
             {
                 ApplicationArea = All;
                 Caption = 'Courses', comment = 'ESP="Cursos"';
-                Image = "Order";
                 RunObject = Page Cursos;
             }
             action(Horarios)
             {
                 ApplicationArea = All;
                 Caption = 'Schedules', comment = 'ESP="Horarios"';
-                Image = "Order";
                 RunObject = Page Horarios;
             }
             action(Alumnos)
             {
                 ApplicationArea = All;
                 Caption = 'Students', comment = 'ESP="Alumnos"';
-                Image = "Order";
                 RunObject = Page Alumnos;
+            }
+            action(Matriculas)
+            {
+                ApplicationArea = All;
+                Caption = 'Tuitions', comment = 'ESP="Matrículas"';
+                RunObject = Page Matriculas;
             }
         }
         area(Sections)
@@ -78,14 +78,12 @@ page 50118 "Admin. Academia Role Center"
                 {
                     ApplicationArea = All;
                     Caption = 'Teachers', comment = 'ESP="Profesores"';
-                    Image = "Order";
                     RunObject = Page Profesores;
                 }
                 action(NoDocentes2)
                 {
                     ApplicationArea = All;
                     Caption = 'Non-Teachers', comment = 'ESP="No Docentes"';
-                    Image = "Order";
                     RunObject = Page "No Docentes";
                 }
             }
@@ -96,14 +94,12 @@ page 50118 "Admin. Academia Role Center"
                 {
                     ApplicationArea = All;
                     Caption = 'Departments', comment = 'ESP="Departamentos"';
-                    Image = "Order";
                     RunObject = Page Departamentos;
                 }
                 action(Cursos2)
                 {
                     ApplicationArea = All;
                     Caption = 'Courses', comment = 'ESP="Cursos"';
-                    Image = "Order";
                     RunObject = Page Cursos;
                 }
             }
@@ -114,26 +110,29 @@ page 50118 "Admin. Academia Role Center"
                 {
                     ApplicationArea = All;
                     Caption = 'Schedules', comment = 'ESP="Horarios"';
-                    Image = "Order";
                     RunObject = Page Horarios;
                 }
                 action(LineasHorario2)
                 {
                     ApplicationArea = All;
                     Caption = 'Schedule lines', comment = 'ESP="Lineas Horario"';
-                    Image = "Order";
                     RunObject = Page "Lineas Horario";
                 }
             }
-            group(AlumnosG)
+            group("Alumnos Matriculas")
             {
-                Caption = 'Students', comment = 'ESP="Alumnos"';
+                Caption = 'Students & Tuitions', comment = 'ESP="Alumnos y Matriculas"';
                 action(Alumnos2)
                 {
                     ApplicationArea = All;
                     Caption = 'Students', comment = 'ESP="Alumnos"';
-                    Image = "Order";
                     RunObject = Page Alumnos;
+                }
+                action(Matriculas2)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Tuitions', comment = 'ESP="Matrículas"';
+                    RunObject = Page Matriculas;
                 }
             }
             group(SetupAndExtensions)
@@ -204,12 +203,19 @@ page 50118 "Admin. Academia Role Center"
                     RunPageMode = Create;
                 }
             }
-
             action(Curso)
             {
                 Caption = 'Course', comment = 'ESP="Curso"';
                 ApplicationArea = All;
                 RunObject = Page "Ficha Curso";
+                RunPageMode = Create;
+            }
+            action(Matricula)
+            {
+                Caption = 'Tuition', comment = 'ESP="Matrícula"';
+                ApplicationArea = All;
+                Image = Create;
+                RunObject = Page "Ficha Matricula";
                 RunPageMode = Create;
             }
         }

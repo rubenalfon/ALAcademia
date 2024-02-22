@@ -25,6 +25,12 @@ page 50110 "Ficha Profesor"
                     ApplicationArea = All;
                     ShowMandatory = true;
                 }
+                field(Dni; Rec.Dni)
+                {
+                    Caption = 'ID', comment = 'ESP="DNI"';
+                    ApplicationArea = All;
+                    ShowMandatory = true;
+                }
             }
 
             group(DireccionContacto)
@@ -100,7 +106,7 @@ page 50110 "Ficha Profesor"
                     Importance = Additional;
                     ApplicationArea = All;
                 }
-                field("Num. Cursos"; Rec."Num. Cursos")
+                field("Num. Lineas Horario"; Rec."Num. Lineas Horario")
                 {
                     Caption = 'No. of Courses', comment = 'ESP="Nº de Cursos"';
                     Importance = Additional;

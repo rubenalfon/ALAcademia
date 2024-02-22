@@ -19,6 +19,12 @@ page 50101 "Ficha Alumno"
                     ApplicationArea = All;
                     ShowMandatory = true;
                 }
+                field(Dni; Rec.Dni)
+                {
+                    Caption = 'ID', comment = 'ESP="DNI"';
+                    ApplicationArea = All;
+                    ShowMandatory = true;
+                }
                 field(Nombre; Rec.Nombre)
                 {
                     Caption = 'Name', comment = 'ESP="Nombre"';
@@ -113,7 +119,6 @@ page 50101 "Ficha Alumno"
                     Page.Run(Page::"Ficha Matricula", Matricula);
                 end;
             }
-
         }
         area(Navigation)
         {

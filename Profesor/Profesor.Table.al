@@ -57,12 +57,14 @@ table 50107 "Profesor"
                 WHERE("Country/Region Code" = FIELD("Cod. Pais"));
             ValidateTableRelation = false;
         }
-        field(12; "Num. Cursos"; Integer)
+        field(12; "Num. Lineas Horario"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = COUNT(Curso WHERE("Id Profesor" = FILTER(<> ''),
-            "Id Profesor" = FIELD("Id Profesor")));
-            //"Linea Horario" WHERE("Dias Semana" = FIELD("Dias Semana")));
+            CalcFormula = count("Linea Horario" where(
+                "Id Profesor Curso" = FILTER(<> ''),
+                "Id Profesor Curso" = FIELD("Id Profesor"),
+                Dia = field("Dias Semana")
+            ));
         }
         field(13; "Num. Ayudantes"; Integer)
         {
@@ -91,6 +93,9 @@ table 50107 "Profesor"
             FieldClass = FlowField;
             CalcFormula = exist(Departamento where("Profesor Jefe" = field("Id Profesor")));
         }
+        field(18; Dni; Text[9])
+        {
+        }
     }
 
     keys
@@ -109,4 +114,12 @@ table 50107 "Profesor"
         }
     }
 
+    trigger OnModify()
+    var
+        Dni: codeunit "Comprobar DNI";
+        LabelMensaje: Label ' is not valid ', Comment = 'ESP=" no es válido "';
+    begin
+        if (Dni.ComprobarDNI(Rec.Dni)) then
+            FieldError(Rec.Dni, LabelMensaje);
+    end;
 }
