@@ -45,6 +45,14 @@ page 50101 "Ficha Alumno"
                     ApplicationArea = All;
                     ShowMandatory = true;
                 }
+                field("Sum. Tarifas"; Rec."Sum. Tarifas")
+                {
+                    ApplicationArea = All;
+                    trigger OnDrillDown()
+                    begin
+                        AlumnoCodeunit.DrillDownSumaTarifas(Rec);
+                    end;
+                }
             }
             group(DireccionContacto)
             {
@@ -102,9 +110,7 @@ page 50101 "Ficha Alumno"
             {
                 Caption = 'New Tuition', comment = 'ESP="Nueva Matrícula"';
                 ApplicationArea = All;
-                RunObject = page "Ficha Matricula";
                 AccessByPermission = TableData Matricula = RIM;
-                RunPageLink = "Alumno Referencia" = field("Id Alumno");
                 RunPageMode = Create;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -132,4 +138,13 @@ page 50101 "Ficha Alumno"
             }
         }
     }
+    var
+        AlumnoCodeunit: Codeunit Alumno;
+
+    trigger OnOpenPage()
+    begin
+        Rec."Sum. Tarifas" := AlumnoCodeunit.CalcSumaTarifas(Rec);
+        CurrPage.Update(true);
+    end;
+
 }

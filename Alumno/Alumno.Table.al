@@ -55,6 +55,11 @@ table 50100 Alumno
         }
         field(11; Dni; Text[9])
         {
+
+        }
+        field(12; "Sum. Tarifas"; Decimal)
+        {
+            Editable = false;
         }
     }
     keys

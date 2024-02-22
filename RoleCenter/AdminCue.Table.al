@@ -12,26 +12,23 @@ table 50108 "Admin Cue"
         field(2; "Num Alumnos"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = count(Alumno where("Id Alumno" = field("Id Alumno Filter")));
+            CalcFormula = count(Alumno);
         }
         // Cursos
         field(3; "Num Cursos"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = count(Curso where("Id Curso" = field("Id Curso Filter"),
-            "Id Dept. Profesor" = field("Id Dept. Filter")));
+            CalcFormula = count(Curso);
         }
         field(4; "Curso Max Tarifa"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = max(Curso."Tarifa Laboratorio" where("Id Curso" = field("Id Curso Filter"),
-            "Tarifa Laboratorio" = filter(> 0)));
+            CalcFormula = max(Curso."Tarifa Laboratorio" where("Tarifa Laboratorio" = filter(> 0)));
         }
         field(5; "Curso Media Tarifas"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = average(Curso."Tarifa Laboratorio" where("Id Curso" = field("Id Curso Filter"),
-            "Tarifa Laboratorio" = filter(> 0)));
+            CalcFormula = average(Curso."Tarifa Laboratorio" where("Tarifa Laboratorio" = filter(> 0)));
         }
         field(6; "Num Cursos Horario"; Integer)
         {
@@ -47,33 +44,30 @@ table 50108 "Admin Cue"
         field(8; "Num Depts"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = count(Departamento where("Id Departamento" = field("Id Dept. Filter")));
+            CalcFormula = count(Departamento);
         }
         field(9; "Depts con Tarifas"; Integer)
         {
             AccessByPermission = TableData Departamento = R;
             FieldClass = FlowField;
-            CalcFormula = count(Departamento where("Promedio Tarifas" = filter(> 0),
-            "Id Departamento" = field("Id Dept. Filter")));
+            CalcFormula = count(Departamento where("Promedio Tarifas" = filter(> 0)));
         }
         // Matriculas
         field(10; "Num Matriculas"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = count(Matricula where("Alumno Referencia" = field("Id Alumno Filter"),
-            "Curso Referencia" = field("Id Curso Filter")));
+            CalcFormula = count(Matricula);
         }
         // No Docentes
         field(11; "Num No Docentes"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = count("No Docente" where("Id No Docente" = field("Id No Docente Filter")));
+            CalcFormula = count("No Docente");
         }
         field(12; "Num Ayudantes"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = count("No Docente" where("Id Profesor" = filter(> 0),
-            "Id Profesor" = field("Id Profesor Filter")));
+            CalcFormula = count("No Docente" where("Id Profesor" = filter(> 0)));
         }
         field(13; "Sum Sal No Docentes"; Decimal)
         {
@@ -89,7 +83,7 @@ table 50108 "Admin Cue"
         field(15; "Num Profesores"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = count(Profesor where("Id Departamento" = field("Id Dept. Filter")));
+            CalcFormula = count(Profesor);
         }
         // Esto no se si funcionara
         field(16; "Profesores Jefes"; Integer)
@@ -106,27 +100,6 @@ table 50108 "Admin Cue"
         {
             FieldClass = FlowField;
             CalcFormula = average(Profesor.Salario);
-        }
-        // Filters
-        field(19; "Id Alumno Filter"; Code[10])
-        {
-            FieldClass = FlowFilter;
-        }
-        field(20; "Id Curso Filter"; Code[10])
-        {
-            FieldClass = FlowFilter;
-        }
-        field(21; "Id Dept. Filter"; Code[10])
-        {
-            FieldClass = FlowFilter;
-        }
-        field(22; "Id No Docente Filter"; Code[10])
-        {
-            FieldClass = FlowFilter;
-        }
-        field(23; "Id Profesor Filter"; Code[10])
-        {
-            FieldClass = FlowFilter;
         }
     }
 

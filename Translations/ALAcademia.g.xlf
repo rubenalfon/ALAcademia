@@ -23,31 +23,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Depts con Tarifas - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 512860144 - Field 2375695971 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id Alumno Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id Alumno Filter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 512860144 - Field 4248146695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id Curso Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id Curso Filter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 512860144 - Field 890740226 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id Dept. Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id Dept. Filter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 512860144 - Field 208601474 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id No Docente Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id No Docente Filter - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 512860144 - Field 202899879 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Id Profesor Filter</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Id Profesor Filter - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 512860144 - Field 4103716198 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Media Sal No Docentes</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -173,6 +148,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Sexo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3063379904 - Field 2714520713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sum. Tarifas</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Sum. Tarifas - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3063379904 - Field 3472582580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Telefono</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -232,6 +212,11 @@
           <source>Courses</source>
           <note from="Developer" annotates="general" priority="2">ESP="Cursos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Curso - FieldGroup DropDown - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 323353982 - Method 1627140692 - NamedType 1313023698" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Office is already in use by another Department.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="El Despacho ya está siendo utilizado por otro Departamento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Departamento - Method Caca - NamedType ErrorLabel</note>
         </trans-unit>
         <trans-unit id="Table 323353982 - Field 196183225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Despacho</source>
@@ -827,6 +812,11 @@
           <source>Total Salaries</source>
           <note from="Developer" annotates="general" priority="2">ESP="Total de Salarios"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Control Sum Sal Profesores - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 582556761 - Action 3050724617 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cues Configuration</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configuración de Pilas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Administrative Activities - Action Editar - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1854860289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Students</source>
