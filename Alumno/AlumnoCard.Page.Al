@@ -141,10 +141,9 @@ page 50101 "Ficha Alumno"
     var
         AlumnoCodeunit: Codeunit Alumno;
 
-    trigger OnOpenPage()
+    trigger OnAfterGetCurrRecord()
     begin
         Rec."Sum. Tarifas" := AlumnoCodeunit.CalcSumaTarifas(Rec);
-        CurrPage.Update(true);
     end;
 
 }
