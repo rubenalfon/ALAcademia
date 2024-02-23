@@ -55,6 +55,15 @@ table 50100 Alumno
         field(11; Dni; Text[9])
         {
             NotBlank = true;
+
+            trigger OnValidate()
+            var
+                Dni: codeunit "Comprobar DNI";
+                LabelMensaje: Label ' is not valid ', Comment = 'ESP=" no es válido "';
+            begin
+                if (Dni.ComprobarDNI(Rec.Dni)) then
+                    FieldError(Rec.Dni, LabelMensaje);
+            end;
         }
         field(12; "Sum. Tarifas"; Decimal)
         {
@@ -76,13 +85,4 @@ table 50100 Alumno
             Caption = 'Students', comment = 'ESP="Alumnos"';
         }
     }
-
-    trigger OnModify()
-    var
-        Dni: codeunit "Comprobar DNI";
-        LabelMensaje: Label ' is not valid ', Comment = 'ESP=" no es válido "';
-    begin
-        if (Dni.ComprobarDNI(Rec.Dni)) then
-            FieldError(Rec.Dni, LabelMensaje);
-    end;
 }

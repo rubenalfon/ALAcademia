@@ -59,6 +59,14 @@ table 50106 "No Docente"
         field(12; Dni; Text[9])
         {
             NotBlank = true;
+            trigger OnValidate()
+            var
+                Dni: codeunit "Comprobar DNI";
+                LabelMensaje: Label ' is not valid ', Comment = 'ESP=" no es válido "';
+            begin
+                if (Dni.ComprobarDNI(Rec.Dni)) then
+                    FieldError(Rec.Dni, LabelMensaje);
+            end;
         }
     }
 
@@ -78,12 +86,4 @@ table 50106 "No Docente"
             Caption = 'Non-Teachers', comment = 'ESP="No Docentes"';
         }
     }
-    trigger OnModify()
-    var
-        Dni: codeunit "Comprobar DNI";
-        LabelMensaje: Label ' is not valid ', Comment = 'ESP=" no es válido "';
-    begin
-        if (Dni.ComprobarDNI(Rec.Dni)) then
-            FieldError(Rec.Dni, LabelMensaje);
-    end;
 }

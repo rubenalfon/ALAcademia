@@ -95,6 +95,14 @@ table 50107 "Profesor"
         field(18; Dni; Text[9])
         {
             NotBlank = true;
+            trigger OnValidate()
+            var
+                Dni: codeunit "Comprobar DNI";
+                LabelMensaje: Label ' is not valid ', Comment = 'ESP=" no es válido "';
+            begin
+                if (Dni.ComprobarDNI(Rec.Dni)) then
+                    FieldError(Rec.Dni, LabelMensaje);
+            end;
         }
     }
 
@@ -113,13 +121,4 @@ table 50107 "Profesor"
             Caption = 'Teacher', comment = 'ESP="Profesor"';
         }
     }
-
-    trigger OnModify()
-    var
-        Dni: codeunit "Comprobar DNI";
-        LabelMensaje: Label ' is not valid ', Comment = 'ESP=" no es válido "';
-    begin
-        if (Dni.ComprobarDNI(Rec.Dni)) then
-            FieldError(Rec.Dni, LabelMensaje);
-    end;
 }

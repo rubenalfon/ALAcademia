@@ -93,11 +93,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Sum Sal Profesores - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3063379904 - Method 1262666395 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
-          <source> is not valid </source>
-          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Method OnModify - NamedType LabelMensaje</note>
-        </trans-unit>
         <trans-unit id="Table 3063379904 - Field 2849675335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cod. Pais</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -117,6 +112,11 @@
           <source>Dni</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Dni - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3063379904 - Field 827058725 - Method 2126772001 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
+          <source> is not valid </source>
+          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Dni - Method OnValidate - NamedType LabelMensaje</note>
         </trans-unit>
         <trans-unit id="Table 3063379904 - Field 129755620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Nacimiento</source>
@@ -343,11 +343,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Matrículas"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Matricula - FieldGroup DropDown - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1050284221 - Method 1262666395 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
-          <source> is not valid </source>
-          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table No Docente - Method OnModify - NamedType LabelMensaje</note>
-        </trans-unit>
         <trans-unit id="Table 1050284221 - Field 2849675335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cod. Pais</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -367,6 +362,11 @@
           <source>Dni</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table No Docente - Field Dni - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1050284221 - Field 827058725 - Method 2126772001 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
+          <source> is not valid </source>
+          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table No Docente - Field Dni - Method OnValidate - NamedType LabelMensaje</note>
         </trans-unit>
         <trans-unit id="Table 1050284221 - Field 414787554 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id No Docente</source>
@@ -418,11 +418,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Profesor - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 4181160540 - Method 1262666395 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
-          <source> is not valid </source>
-          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Profesor - Method OnModify - NamedType LabelMensaje</note>
-        </trans-unit>
         <trans-unit id="Table 4181160540 - Field 2849675335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cod. Pais</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -447,6 +442,11 @@
           <source>Dni</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Profesor - Field Dni - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4181160540 - Field 827058725 - Method 2126772001 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
+          <source> is not valid </source>
+          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Profesor - Field Dni - Method OnValidate - NamedType LabelMensaje</note>
         </trans-unit>
         <trans-unit id="Table 4181160540 - Field 380875614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Contratacion</source>

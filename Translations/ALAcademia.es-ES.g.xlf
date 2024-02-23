@@ -93,12 +93,6 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Admin Cue - Field Sum Sal Profesores - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3063379904 - Method 1262666395 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
-          <source> is not valid </source>
-          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Method OnModify - NamedType LabelMensaje</note>
-          <target> no es válido </target>
-        </trans-unit>
         <trans-unit id="Table 3063379904 - Field 2849675335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cod. Pais</source>
           <note from="Developer" annotates="general" priority="2"/>
@@ -118,6 +112,12 @@
           <source>Dni</source>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Dni - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3063379904 - Field 827058725 - Method 2126772001 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
+          <source> is not valid </source>
+          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Alumno - Field Dni - Method OnValidate - NamedType LabelMensaje</note>
+          <target> no es válido </target>
         </trans-unit>
         <trans-unit id="Table 3063379904 - Field 129755620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Nacimiento</source>
@@ -377,6 +377,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table No Docente - Field Dni - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1050284221 - Field 827058725 - Method 2126772001 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
+          <source> is not valid </source>
+          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table No Docente - Field Dni - Method OnValidate - NamedType LabelMensaje</note>
+          <target> no es válido </target>
+        </trans-unit>
         <trans-unit id="Table 1050284221 - Field 414787554 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id No Docente</source>
           <note from="Developer" annotates="general" priority="2"/>
@@ -459,6 +465,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table Profesor - Field Dni - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4181160540 - Field 827058725 - Method 2126772001 - NamedType 1311087375" size-unit="char" translate="yes" xml:space="preserve">
+          <source> is not valid </source>
+          <note from="Developer" annotates="general" priority="2">ESP=" no es válido "</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Profesor - Field Dni - Method OnValidate - NamedType LabelMensaje</note>
+          <target> no es válido </target>
+        </trans-unit>
         <trans-unit id="Table 4181160540 - Field 380875614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Contratacion</source>
           <note from="Developer" annotates="general" priority="2"/>
@@ -529,6 +541,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Profesor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Profesor - FieldGroup DropDown - Property Caption</note>
           <target>Profesor</target>
+        </trans-unit>
+        <trans-unit id="Codeunit 3063379904 - Method 2628696791 - NamedType 4047317197" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This Student doesn't have any Tuition.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Este Alumno no tiene ninguna Matrícula."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Alumno - Method DrillDownSumaTarifas - NamedType MensajeError</note>
+          <target>Este Alumno no tiene ninguna Matrícula.</target>
         </trans-unit>
         <trans-unit id="Page 2691384627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Role Center Admin.</source>
