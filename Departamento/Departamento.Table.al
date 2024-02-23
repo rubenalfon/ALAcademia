@@ -17,6 +17,10 @@ table 50105 Departamento
         field(3; Despacho; Text[100])
         {
             NotBlank = true;
+            trigger OnValidate()
+            begin
+                CheckDespacho();
+            end;
         }
         field(5; "Profesor Jefe"; Code[10])
         {
@@ -46,11 +50,6 @@ table 50105 Departamento
             Caption = 'Departments', comment = 'ESP="Departamentos"';
         }
     }
-
-    trigger OnModify()
-    begin
-        CheckDespacho();
-    end;
 
     local procedure CheckDespacho()
     var
